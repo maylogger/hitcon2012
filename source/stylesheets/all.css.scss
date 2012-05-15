@@ -1,0 +1,82 @@
+
+@import "ggs";
+
+html {
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  padding-top: $ggs-line * 4px;
+  background: black;
+  color: white;
+}
+
+#ggs-baseline-container,
+.ggs-guide {
+  pointer-events: none;
+}
+
+#ggs-switch {
+  display: none;
+}
+
+#hd {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  margin: 0 auto;
+  float: none;
+}
+
+
+// webfont control
+
+.ct2 {
+  visibility: hidden;
+}
+
+.wf {
+  @include transition(all .1s ease-in-out);
+}
+
+.wf-loading .wf {
+  opacity: 0;
+}
+.wf-active .wf {
+  opacity: 1;
+}
+
+
+// title sytle
+
+.title {
+  font-weight: bold;
+  @include adjust-font-size-to(50px);
+  text-shadow: 0 0 .1em rgba(white,.9);
+  color: rgba(white,.9);
+}
+
+.sub-title {
+  @include adjust-font-size-to(40px);
+  font-family: "adobe-text-pro", Georgia, "Times New Roman", serif;
+  text-transform: uppercase;
+  text-shadow: 0 0 .2em rgba(white,.9), 0 0 .1em rgba(white,.9);
+  color: rgba(white,.9);
+  &:last-child {
+    @include leader(3,40px);
+  }
+}
+
+.big-title {
+  @include leader(3,120px);
+  @include adjust-font-size-to(120px, 4);
+  font-family: "changeling-neo-stencil", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  text-shadow: 0 0 .1em rgba(211, 59, 58,.9), 0 0 .06em rgba(211, 59, 58,.9);
+  color: rgba(211, 59, 58,.3);
+  letter-spacing: 10px;
+  margin-left: .09em;
+  span {
+    display: block;
+  }
+}

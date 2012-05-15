@@ -1,0 +1,11 @@
+!!! 5
+%html
+  %head
+    %meta{ :charset => "utf-8" }
+    = stylesheet_link_tag( "all" )
+    = javascript_include_tag( "all" )
+  %body
+    .container
+      = yield
+    = partial "shared/justfont"
+    = partial "shared/typekit"
