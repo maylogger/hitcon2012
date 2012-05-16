@@ -2,6 +2,7 @@
 %html
   %head
     %meta{ :charset => "utf-8" }
+    %title= data.config.site_name
     /[if lt IE 9]
       <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
     %meta{:content => "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no", :name => "viewport"}
@@ -9,8 +10,11 @@
     -#<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
     -#<link rel="apple-touch-icon" sizes="72x72" href="/images/apple-touch-icon-72x72.png">
     -#<link rel="apple-touch-icon" sizes="114x114" href="/images/apple-touch-icon-114x114.png">
+    = partial "shared/fb-og-meta"
+    = partial "shared/funny"
     = stylesheet_link_tag( "all" )
   %body
+    = partial "shared/fb-like-only"
     .container
       = yield
     = javascript_include_tag( "all" )

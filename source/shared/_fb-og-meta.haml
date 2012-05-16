@@ -1,0 +1,27 @@
+- if data.page.title
+  = content_tag "meta", "property" => "og:title", "content" => "#{data.page.title} - #{data.config.site_name}"
+- else
+  %meta{:content => data.config.site_name, :property => "og:title"}
+
+- if data.page.og_url
+  = content_tag "meta", "property" => "og:url", "content" => data.page.og_url
+- else
+  %meta{:content => data.config.site_url, :property => "og:url"}
+
+- if data.page.og_description
+  = content_tag "meta", "property" => "og:description", "content" => data.page.og_description
+- else
+  %meta{:content => data.facebook.default_og_description, :property => "og:description"}
+
+- if data.page.og_image
+  = content_tag "meta", "property" => "og:image", "content" => data.page.og_image
+- else
+  %meta{:content => "#{data.config.site_url}images/fb.jpg", :property => "og:image"}
+
+- if data.page.og_type
+  = content_tag "meta", "property" => "og:type", "content" => data.page.og_type
+- else
+  %meta{:content => "article", :property => "og:type"}
+
+%meta{:content => data.config.site_name, :property => "og:site_name"}
+%meta{:content => data.facebook.admins, :property => "fb:admins"}/
