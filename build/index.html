@@ -46,7 +46,7 @@
     <link type="text/css" href="stylesheets/all.css" media="screen" rel="stylesheet" />
   </head>
   <body>
-    <div class='fb-like fb-like-only' data-layout="button_count" data-send='false' data-show-faces='false' data-width='100'></div>
+    <div class='sns'><div class='fb-like fb-like-only' data-layout="button_count" data-send='false' data-colorscheme="dark" data-show-faces='false' data-width='100'></div></div>
     <div class='container'>
       <div class='p-4 pw-6 t-6 tw-6 d-5 dw-6 dw3-8' id='hd'>
         <div class='content'>
@@ -65,5 +65,16 @@
     <script type="text/javascript" src="http://use.typekit.com/kip6jhf.js"></script>
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
     <script type="text/javascript">(function() {var jf = document.createElement('script'); jf.type = 'text/javascript'; jf.async = true;jf.src = 'http://ds.justfont.com/core/js/v1.0/7b877747pvHCmpLX_7aZ8FK_YXYMGaZnbM3NCKXkw8PK5xsh-Iw6KBLSE1itaYdTofz1auIYGkxnHXL0Da22bDjcnefH9PmC4md7nTKNf4pKpWwtniR3IOS75GIbw4VSLP6hdAx7i3mwxMvCOK9l23g59-7Ac3VDTUF3UWl67Vk9_IwrwNw=.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(jf,s);})();</script>
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/zh_TW/all.js#xfbml=1&appId=";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+    
+    
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
   </body>
 </html>
