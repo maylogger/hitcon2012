@@ -1,25 +1,25 @@
 - if data.page.title
-  = content_tag "meta", "property" => "og:title", "content" => "#{data.page.title} - #{data.config.site_name}"
+  %meta{:content => "#{data.page.title} - #{data.config.site_name}", :property => "og:title"}
 - else
   %meta{:content => data.config.site_name, :property => "og:title"}
 
 - if data.page.og_url
-  = content_tag "meta", "property" => "og:url", "content" => data.page.og_url
+  %meta{:content => data.page.og_url, :property => "og:url"}
 - else
   %meta{:content => data.config.site_url, :property => "og:url"}
 
 - if data.page.og_description
-  = content_tag "meta", "property" => "og:description", "content" => data.page.og_description
+  %meta{:content => data.page.og_description, :property => "og:description"}
 - else
   %meta{:content => data.facebook.default_og_description, :property => "og:description"}
 
 - if data.page.og_image
-  = content_tag "meta", "property" => "og:image", "content" => data.page.og_image
+  %meta{:content => data.page.og_image, :property => "og:image"}
 - else
-  %meta{:content => "#{data.config.site_url}images/fb.jpg", :property => "og:image"}
+  %meta{:content => "#{data.config.site_url}images/fb.png", :property => "og:image"}
 
 - if data.page.og_type
-  = content_tag "meta", "property" => "og:type", "content" => data.page.og_type
+  %meta{:content => data.page.og_type, :property => "og:type"}
 - else
   %meta{:content => "article", :property => "og:type"}
 
