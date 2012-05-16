@@ -37,15 +37,21 @@ body {
 
 .wf {
   @include transition(all .1s ease-in-out);
+  opacity: 0;
 }
 
 .wf-loading .wf {
   opacity: 0;
 }
+
+.wf-inactive .wf,
 .wf-active .wf {
   opacity: 1;
 }
 
+.wf-loading #hd {
+  background: image-url("ajax-loader.gif") no-repeat center center;
+}
 
 // title sytle
 
