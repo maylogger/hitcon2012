@@ -1,0 +1,78 @@
+.container {
+  background: black;
+  text-align: center;
+  #hd {
+    padding: 50px 0;
+    position: relative;
+    z-index: 1;
+    background: image-url("line.png") center center;
+  }
+}
+
+// for video
+
+.container {
+  overflow: hidden;
+  position: relative;
+  .video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 0;
+  }
+  video {
+    @extend .container;
+    height: auto;
+    width: 940px;
+    margin-left: - 940px / 2;
+    margin-top: - 65%;
+    @media (max-width: 480px) {
+      display: none;
+    }
+    @media (max-width: 767px) {
+      display: none;
+    }
+    @media (min-width: 768px) and (max-width: 979px) {
+      width: 724px;
+      margin-left: - 724px / 2;
+    }
+    @media (min-width: 1200px) {
+      width: 1170px;
+      margin-left: - 1170px / 2;
+    }
+
+  }
+}
+
+.title {
+  font-weight: bold;
+  @include adjust-font-size-to(50px);
+  text-shadow: 0 0 .1em rgba(84,173,255,0.9);
+  color: rgba(white,.9);
+}
+
+.sub-title {
+  @include adjust-font-size-to(40px);
+  font-family: "adobe-text-pro", Georgia, "Times New Roman", serif;
+  text-transform: uppercase;
+  text-shadow: 0 0 .1em rgba(84,173,255,0.9);
+  color: rgba(white,.9);
+  &:last-child {
+    @include leader(3,40px);
+  }
+}
+
+.big-title {
+  $font-size: 120px;
+  @include adjust-font-size-to($font-size, 4);
+  @include trailer(1,$font-size);
+  font-family: "changeling-neo-stencil", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  text-shadow: 0 0 .1em rgba(84,173,255,0.9);
+  color: rgba(white,.9);
+  letter-spacing: .08em;
+  margin-left: .09em;
+  span {
+    display: block;
+  }
+}

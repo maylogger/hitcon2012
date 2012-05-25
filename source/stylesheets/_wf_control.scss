@@ -1,0 +1,29 @@
+// webfont control
+
+/*
+.ct2 {
+  visibility: hidden;
+}
+
+.wf {
+  @include transition(all .1s ease-in-out);
+  opacity: 0;
+}
+
+.wf-loading .wf {
+  opacity: 0;
+}
+
+.wf-inactive .wf,
+.wf-active .wf {
+  opacity: 1;
+}
+
+.wf-active .wf {
+  font-weight: normal;
+}
+
+.wf-loading #hd {
+  background: image-url("ajax-loader.gif") no-repeat center center;
+}
+*/

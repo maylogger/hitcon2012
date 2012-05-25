@@ -1,100 +1,22 @@
+$only3d: ture;
+@import "compass";
 
-@import "ggs";
+// bootstrap setup
+$iconSpritePath:          url("/images/glyphicons-halflings.png");
+$iconWhiteSpritePath:     url("/images/glyphicons-halflings-white.png");
+@import "bootstrap";
+@import "bootstrap-responsive";
 
-html {
+$light-gray: #eeeeef;
+
+html,body {
   -webkit-font-smoothing: antialiased;
+  background: $light-gray;
 }
 
-body {
-  padding-top: $ggs-line * 4px;
-  padding-bottom: $ggs-line * 4px;
-  background: black;
-  color: white;
-}
+@import "header";
+@import "wf_control";
 
-#ggs-baseline-container,
-.ggs-guide {
-  pointer-events: none;
-}
-
-#ggs-switch {
-  display: none;
-}
-
-#hd {
-  position: relative;
-  z-index: 10;
-  text-align: center;
-  margin: 0 auto;
-  float: none;
-}
-
-.sns {
-  position: absolute;
-  top: 48px;
-  left: 50%;
-  margin-left: -20px;
-  z-index: 20;
-}
-
-// webfont control
-
-.ct2 {
-  visibility: hidden;
-}
-
-.wf {
-  @include transition(all .1s ease-in-out);
-  opacity: 0;
-}
-
-.wf-loading .wf {
-  opacity: 0;
-}
-
-.wf-inactive .wf,
-.wf-active .wf {
-  opacity: 1;
-}
-
-.wf-active .wf {
-  font-weight: normal;
-}
-
-.wf-loading #hd {
-  background: image-url("ajax-loader.gif") no-repeat center center;
-}
-
-// title sytle
-
-.title {
-  font-weight: bold;
-  @include adjust-font-size-to(50px);
-  text-shadow: 0 0 .1em rgba(white,.9);
-  color: rgba(white,.9);
-}
-
-.sub-title {
-  @include adjust-font-size-to(40px);
-  font-family: "adobe-text-pro", Georgia, "Times New Roman", serif;
-  text-transform: uppercase;
-  text-shadow: 0 0 .2em rgba(white,.9), 0 0 .1em rgba(white,.9);
-  color: rgba(white,.9);
-  &:last-child {
-    @include leader(3,40px);
-  }
-}
-
-.big-title {
-  @include leader(3,120px);
-  @include adjust-font-size-to(120px, 4);
-  font-family: "changeling-neo-stencil", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-transform: uppercase;
-  text-shadow: 0 0 .1em rgba(211, 59, 58,.9), 0 0 .06em rgba(211, 59, 58,.9);
-  color: rgba(211, 59, 58,.3);
-  letter-spacing: .08em;
-  margin-left: .09em;
-  span {
-    display: block;
-  }
+.container {
+  background: white;
 }
