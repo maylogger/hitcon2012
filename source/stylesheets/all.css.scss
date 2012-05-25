@@ -11,7 +11,9 @@ $light-gray: #eeeeef;
 
 html,body {
   -webkit-font-smoothing: antialiased;
-  background: $light-gray;
+  background: #333;
+  font-size: 16px;
+  line-height: 24px;
 }
 
 @import "header";
@@ -19,4 +21,33 @@ html,body {
 
 .container {
   background: white;
+}
+
+.text-wrapper {
+  padding: 24px;
+}
+
+.about {
+  background: #444;
+  color: #333;
+  .hitimg {
+    background: image-url("hitcon.jpg") no-repeat center center;
+    @include background-size(cover);
+    min-height: 550px;
+    @media (max-width: 767px) {
+      min-height: 300px;
+    }
+  }
+  .whats-hitcon {
+    h2 {
+      @include adjust-font-size-to(32px);
+      @include trailer(2/3, 32px);
+      text-shadow: 0 1px 0 rgba(white,.3);
+    }
+    p {
+      color: #999;
+      @include adjust-font-size-to(16px);
+      @include trailer(1,16px);
+    }
+  }
 }
