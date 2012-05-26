@@ -11,7 +11,7 @@ $light-gray: #eeeeef;
 
 html,body {
   -webkit-font-smoothing: antialiased;
-  background: #333;
+  background: black;
   font-size: 16px;
   line-height: 24px;
 }
@@ -28,8 +28,8 @@ html,body {
 }
 
 .about {
-  background: #444;
-  color: #333;
+  background: #2e2e2e;
+  @include background( linear-gradient(#2e2e2e, #1c1c1c) );
   .hitimg {
     background: image-url("hitcon.jpg") no-repeat center center;
     @include background-size(cover);
@@ -41,7 +41,9 @@ html,body {
     h2 {
       @include adjust-font-size-to(32px);
       @include trailer(2/3, 32px);
-      text-shadow: 0 1px 0 rgba(white,.3);
+      text-shadow: 0px 1px 2px rgba(white,.15);
+      color: black;
+      text-align: center;
     }
     p {
       color: #999;
