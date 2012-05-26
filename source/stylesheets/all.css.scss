@@ -16,12 +16,12 @@ html,body {
   line-height: 24px;
 }
 
+@media (max-width: 767px) {
+  body { padding: 0; }
+}
+
 @import "header";
 @import "wf_control";
-
-.container {
-  background: white;
-}
 
 .text-wrapper {
   padding: 24px;
@@ -33,7 +33,6 @@ html,body {
   .hitimg {
     background: image-url("hitcon.jpg") no-repeat center center;
     @include background-size(cover);
-    min-height: 550px;
     @media (max-width: 767px) {
       min-height: 300px;
     }
@@ -48,6 +47,12 @@ html,body {
       color: #999;
       @include adjust-font-size-to(16px);
       @include trailer(1,16px);
+    }
+  }
+  @media (min-width: 768px) and (max-width: 979px) {
+    .span6 {
+      float: none;
+      width: auto;
     }
   }
 }

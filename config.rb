@@ -8,7 +8,7 @@
 
 # Change Compass configuration
 compass_config do |config|
-  config.output_style = :compressed
+  config.output_style = :expanded
   config.line_comments = false
 end
 
