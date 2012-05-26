@@ -11,50 +11,44 @@ $light-gray: #eeeeef;
 
 html,body {
   -webkit-font-smoothing: antialiased;
-  background: black;
+  background: #d7d8da;
   font-size: 16px;
   line-height: 24px;
 }
 
-@media (max-width: 767px) {
-  body { padding: 0; }
+.container {
+  overflow: hidden;
+  @include box-shadow( 0 1px 5px rgba(black,.8) );
+}
+
+
+body {
+  padding: 48px 0;
+  @media (max-width: 767px) {
+    padding: 0;
+  }
+}
+
+.text-wrapper {
+  padding: 20px;
+}
+
+h2 {
+  @include adjust-font-size-to(48px, 2);
+  @include trailer(2/3, 48px);
+}
+
+h3 {
+  @include adjust-font-size-to(24px, 1);
+  @include trailer(1/2, 24px);
+}
+
+p {
+  @include adjust-font-size-to(16px);
+  @include trailer(1,16px);
 }
 
 @import "header";
 @import "wf_control";
-
-.text-wrapper {
-  padding: 24px;
-}
-
-.about {
-  background: #2e2e2e;
-  @include background( linear-gradient(#2e2e2e, #1c1c1c) );
-  .hitimg {
-    background: image-url("hitcon.jpg") no-repeat center center;
-    @include background-size(cover);
-    @media (max-width: 767px) {
-      min-height: 300px;
-    }
-  }
-  .whats-hitcon {
-    h2 {
-      @include adjust-font-size-to(32px);
-      @include trailer(2/3, 32px);
-      text-shadow: 0px 1px 2px rgba(white,.15);
-      color: black;
-      text-align: center;
-    }
-    p {
-      color: #999;
-      @include adjust-font-size-to(16px);
-      @include trailer(1,16px);
-    }
-  }
-  @media (min-width: 768px) and (max-width: 979px) {
-    .span6 {
-      float: none;
-      width: auto;
-    }
-  }
-}
+@import "about";
+@import "feature";

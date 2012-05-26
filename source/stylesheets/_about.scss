@@ -1,0 +1,40 @@
+.about {
+  .text-wrapper {
+    padding: 48px 24px;
+    padding-right: 0;
+    @media (max-width: 979px) {
+      padding-right: 24px;
+    }
+  }
+  background: #2e2e2e;
+  @include background( linear-gradient(#2e2e2e, #1c1c1c) );
+  .hitimg {
+    background: image-url("hitcon.jpg") no-repeat center center;
+    @include background-size(cover);
+    @media (max-width: 767px) {
+      min-height: 300px;
+    }
+  }
+  .whats-hitcon {
+    .wf-h2 {
+      text-shadow: 0px 1px 2px rgba(white,.15);
+      color: black;
+      text-align: center;
+    }
+    p {
+      color: #ddd;
+    }
+  }
+  @media (min-width: 768px) and (max-width: 979px) {
+    .span6 {
+      float: none;
+      width: auto;
+    }
+  }
+}
+
+.no-js .hitimg {
+  height: 500px;
+}
+
+

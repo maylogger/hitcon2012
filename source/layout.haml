@@ -13,8 +13,10 @@
     = partial "shared/fb-og-meta"
     = partial "shared/funny"
     = stylesheet_link_tag( "all" )
-  %body
-    = yield
+  %body.no-js
+    .container
+      = yield
     = javascript_include_tag( "all" )
     = partial "shared/typekit"
     = partial "shared/justfont"
+    = partial "shared/pictos"

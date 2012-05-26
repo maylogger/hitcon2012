@@ -1,0 +1,35 @@
+.feature {
+  background: white image-url("leather.png");
+  color: #666;
+  padding: 48px 0;
+  hgroup {
+    margin: 0 20px;
+    padding-bottom: 24px;
+    color: #333;
+    h2 {
+      text-align: center;
+    }
+    h3 {
+      text-align: center;
+      $font-size: 25px;
+      @include adjust-font-size-to($font-size,2);
+      @include trailer(1,$font-size);
+    }
+  }
+  h3 {
+    $font-size: 25px;
+    @include adjust-font-size-to($font-size,2);
+  }
+  [data-icon]:before {
+    font-size: 48px;
+    margin-right: 12px;
+    position: relative;
+    top: .25em;
+    color: black;
+    text-shadow: 0 3px 2px rgba(black,.125);
+  }
+  .text-wrapper {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}

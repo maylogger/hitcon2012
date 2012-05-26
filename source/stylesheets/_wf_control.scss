@@ -1,29 +1,56 @@
-// webfont control
+// init
 
-/*
 .ct2 {
   visibility: hidden;
 }
 
 .wf {
-  @include transition(all .1s ease-in-out);
-  opacity: 0;
-}
-
-.wf-loading .wf {
-  opacity: 0;
-}
-
-.wf-inactive .wf,
-.wf-active .wf {
+  @include transition(opacity .5s ease-in-out);
   opacity: 1;
 }
 
-.wf-active .wf {
+.wf-h2 {
+  font-family: "ff-netto-web", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal;
+  opacity: 1;
+  @include transition(opacity .5s);
 }
 
-.wf-loading #hd {
-  background: image-url("ajax-loader.gif") no-repeat center center;
+
+// loading
+
+.wf-loading {
+  .wf-h2,
+  .wf {
+    opacity: 0;
+  }
+  .still {
+    background: black;
+  }
+  #hd {
+    background: image-url("ajax-loader.gif") no-repeat center center;
+  }
+  video {
+    display: none;
+  }
 }
-*/
+
+// active
+
+.wf-active {
+  .wf {
+    font-weight: normal;
+  }
+  .wf-h2 {
+    position: relative;
+    top: .15em;
+  }
+}
+
+// icon font
+
+[data-icon]:before {
+	font-family: 'Pictos Custom';
+	content: attr(data-icon);
+}
+

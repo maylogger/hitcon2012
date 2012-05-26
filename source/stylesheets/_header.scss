@@ -1,10 +1,13 @@
-.container {
+.still {
   background: black;
   #hd {
     text-align: center;
-    padding: 50px 0;
+    padding: 5em 0;
     position: relative;
     z-index: 1;
+    @media (max-width: 979px) {
+      padding: 4em 0;
+    }
   }
 }
 
@@ -15,7 +18,7 @@
   @include background-size(cover);
 }
 
-.container {
+.still {
   overflow: hidden;
   position: relative;
   .video {
@@ -23,31 +26,13 @@
     top: 50%;
     left: 50%;
     z-index: 0;
-    background: image-url("space.png") no-repeat center center;
-    @media (max-width: 480px) {
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 227px;
-      @include background-size(cover);
-    }
-    @media (max-width: 767px) {
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 330px;
-      @include background-size(cover);      
-    }
-    @media (min-width: 768px) {
-      background: none;
-    }
   }
   video {
     @extend .container;
     height: auto;
     width: 942px;
     margin-left: - 942px / 2;
-    margin-top: - 65%;
+    margin-top: - 64%;
     @media (max-width: 480px) {
       display: none;
     }
@@ -67,8 +52,8 @@
 }
 
 .big-title {
-  $font-size: 120px;
-  @include adjust-font-size-to($font-size, 4);
+  $font-size: 100px;
+  @include adjust-font-size-to($font-size, 3);
   @include trailer(1,$font-size);
   font-family: "changeling-neo-stencil", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
@@ -86,6 +71,7 @@
 
 .sub-title {
   @include adjust-font-size-to(40px);
+  margin: 0;
   font-family: "adobe-text-pro", Georgia, "Times New Roman", serif;
   text-transform: uppercase;
   text-shadow: 0 0 .1em rgba(84,173,255,0.9);
@@ -94,7 +80,7 @@
     @include leader(3,40px);
   }
   .wf-active & {
-    font-weight: normal;
+    font-weight: bold;
   }
 }
 
