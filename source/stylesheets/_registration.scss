@@ -1,0 +1,27 @@
+.registration {
+  background: #ffe;
+  padding: 35px 0 24px;
+  @include baseline-grid-background(24px,(#4b76a7 - #666 + #dda) );
+  .icon {
+    opacity: .3;
+  }
+  .text-wrapper {
+    padding: 24px 20px;
+  }
+  h2 {
+    color: #a00;
+  }
+  h3 {
+    @include trailer(1, 24px);
+  }
+  .row-fluid {
+    margin: 0 10%;
+    width: auto;
+    .span6:first-child {
+      margin-right: -5px;
+    }
+    .span6:last-child {
+      border-left: 3px double #c66;
+    }
+  }
+}

@@ -27,6 +27,9 @@ end
 # Automatic image dimensions on image_tag helper
 # activate :automatic_image_sizes
 
+require 'rdiscount'
+set :markdown_engine => "rdiscount"
+
 ###
 # Page command
 ###

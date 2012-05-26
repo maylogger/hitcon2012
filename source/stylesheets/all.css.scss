@@ -33,6 +33,29 @@ body {
   padding: 20px;
 }
 
+.big-header {
+  padding-top: 48px;
+  hgroup {
+    margin: 0 20px;
+    padding-bottom: 24px;
+    .icon {
+      display: block;
+      text-align: center;
+      margin-bottom: .3em;
+      font-size: 70px;
+    }
+    h2 {
+      text-align: center;
+    }
+    h3 {
+      text-align: center;
+      $font-size: 25px;
+      @include adjust-font-size-to($font-size,2);
+      @include trailer(1,$font-size);
+    }
+  }
+}
+
 h2 {
   @include adjust-font-size-to(48px, 2);
   @include trailer(2/3, 48px);
@@ -42,10 +65,21 @@ h3 {
   @include adjust-font-size-to(24px, 1);
   @include trailer(1/2, 24px);
 }
+h4 {
+  @include adjust-font-size-to(18px, 1);
+  @include trailer(1, 18px);
+}
 
-p {
+li,ol,ul,p {
   @include adjust-font-size-to(16px);
+}
+
+ol,ul,p {
   @include trailer(1,16px);
+}
+
+ol, ul {
+  margin-left: 3em;
 }
 
 @import "header";
@@ -53,3 +87,5 @@ p {
 @import "about";
 @import "feature";
 @import "agenda";
+@import "registration";
+@import "venue";
