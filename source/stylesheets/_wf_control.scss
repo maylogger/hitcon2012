@@ -49,7 +49,7 @@
 
 // icon font
 
-[data-icon]:before {
+.icon:before {
 	font-family: 'Pictos Custom';
 	content: attr(data-icon);
 }
