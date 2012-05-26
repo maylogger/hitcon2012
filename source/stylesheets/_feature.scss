@@ -20,9 +20,8 @@
     $font-size: 25px;
     @include adjust-font-size-to($font-size,2);
   }
-  .icon:before {
+  .icon {
     font-size: 48px;
-    margin-right: 12px;
     position: relative;
     top: .24em;
     color: black;

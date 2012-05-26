@@ -49,8 +49,10 @@
 
 // icon font
 
-.icon:before {
+i.icon {
 	font-family: 'Pictos Custom';
+	font-style: normal;
+	font-weight: normal;
 	content: attr(data-icon);
 }
 
