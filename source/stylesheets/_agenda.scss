@@ -1,0 +1,41 @@
+.agenda {
+  background: #4b76a7;
+  color: rgba(white,.9);
+  padding: 10px;
+  .line {
+    height: 400px;
+    position: relative;
+    border: 3px solid rgba(white,.1);
+    padding: 10px;
+  }
+  hgroup {
+    margin: 0 20px;
+    padding-bottom: 24px;
+    .icon {
+      font-size: 48px;
+      line-height: 1;
+      position: relative;
+      top: .15em;
+    }
+    h2 {
+      $font-size: 32px;
+      @include adjust-font-size-to($font-size,2);
+    }
+    h3 {
+      position: absolute;
+      bottom: 120px;
+      right: 24px;
+      $font-size: 36px;
+      @include adjust-font-size-to($font-size,2);
+      @include trailer(1,$font-size);
+      z-index: 1;
+    }
+  }
+  .fo {
+    position: absolute;
+    left: 100px;
+    bottom: -13px;
+    z-index: 0;
+    opacity: .5;
+  }
+}
