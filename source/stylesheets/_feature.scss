@@ -23,7 +23,7 @@
     }
   }
   h3 {
-    $font-size: 25px;
+    $font-size: 22px;
     @include adjust-font-size-to($font-size,2);
     color: black;
   }
@@ -35,6 +35,6 @@
     text-shadow: 0 3px 2px rgba(black,.125);
   }
   .text-wrapper {
-    padding-top: 0;
+    padding: 0 10px 24px 0;
   }
 }
