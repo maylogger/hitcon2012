@@ -4871,6 +4871,7 @@ html, body {
   background: #d7d8da;
   font-size: 16px;
   line-height: 24px;
+  -webkit-text-size-adjust: 100%;
 }
 
 .container, .still video {
@@ -4882,6 +4883,11 @@ html, body {
 
 body {
   padding: 48px 0;
+}
+@media (min-width: 768px) and (max-width: 979px) {
+  body {
+    padding: 20px;
+  }
 }
 @media (max-width: 767px) {
   body {
@@ -4943,8 +4949,8 @@ ol, ul, p {
   margin-bottom: 1.5em;
 }
 
-ol, ul {
-  margin-left: 3em;
+ul ul {
+  margin-left: 1em;
 }
 
 .still {
@@ -4963,7 +4969,7 @@ ol, ul {
 }
 
 .still {
-  background: url('../images/space.png') no-repeat center center;
+  background: url('../images/space.jpg') no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -5052,6 +5058,14 @@ ol, ul {
 }
 .wf-active .jf-title {
   font-weight: normal;
+}
+
+html.touch video {
+  display: none;
+}
+
+html.no-video video {
+  display: none;
 }
 
 .ct2 {
@@ -5190,8 +5204,8 @@ i.icon {
   margin-bottom: 0.96em;
 }
 .feature h3 {
-  font-size: 1.563em;
-  line-height: 1.92em;
+  font-size: 1.375em;
+  line-height: 2.182em;
   color: black;
 }
 .feature .icon {
@@ -5202,7 +5216,7 @@ i.icon {
   text-shadow: 0 3px 2px rgba(0, 0, 0, 0.125);
 }
 .feature .text-wrapper {
-  padding-top: 0;
+  padding: 0 10px 24px 0;
 }
 
 .agenda {
@@ -5321,7 +5335,7 @@ i.icon {
 
 .registration {
   background: #ffe;
-  padding: 35px 0 24px;
+  padding: 35px 0 48px;
   background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(5%, #ddedeb), color-stop(5%, rgba(221, 237, 235, 0)));
   background-image: -webkit-linear-gradient(bottom, #ddedeb 5%, rgba(221, 237, 235, 0) 5%);
   background-image: -moz-linear-gradient(bottom, #ddedeb 5%, rgba(221, 237, 235, 0) 5%);
@@ -5338,7 +5352,7 @@ i.icon {
   opacity: .3;
 }
 .registration .text-wrapper {
-  padding: 24px 20px;
+  padding: 24px 0 0 15px;
 }
 .registration h2 {
   color: #a00;
@@ -5355,4 +5369,14 @@ i.icon {
 }
 .registration .row-fluid .span6:last-child {
   border-left: 3px double #c66;
+}
+.registration em {
+  font-family: Georgia, serif;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 1.2em;
+  line-height: 24px;
+  color: #a00;
+  background: rgba(203, 255, 129, 0.51);
+  padding: 5px;
 }
