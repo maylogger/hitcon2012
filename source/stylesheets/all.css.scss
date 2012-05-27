@@ -14,6 +14,7 @@ html,body {
   background: #d7d8da;
   font-size: 16px;
   line-height: 24px;
+  -webkit-text-size-adjust: 100%;
 }
 
 .container {
@@ -24,6 +25,9 @@ html,body {
 
 body {
   padding: 48px 0;
+  @media (min-width: 768px) and (max-width: 979px) {
+    padding: 20px;
+  }
   @media (max-width: 767px) {
     padding: 0;
   }
@@ -78,8 +82,8 @@ ol,ul,p {
   @include trailer(1,16px);
 }
 
-ol, ul {
-  margin-left: 3em;
+ul ul {
+  margin-left: 1em;
 }
 
 @import "header";

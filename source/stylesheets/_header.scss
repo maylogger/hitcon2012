@@ -14,7 +14,7 @@
 // for video
 
 .still {
-  background: image-url("space.png") no-repeat center center;
+  background: image-url("space.jpg") no-repeat center center;
   @include background-size(cover);
 }
 
@@ -92,4 +92,17 @@
   .wf-active & {
     font-weight: normal;
   }
+}
+
+
+// if touch panel
+
+html.touch video {
+  display: none;
+}
+
+// if no-video support
+
+html.no-video video {
+  display: none;
 }

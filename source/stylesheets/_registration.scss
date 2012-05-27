@@ -1,12 +1,12 @@
 .registration {
   background: #ffe;
-  padding: 35px 0 24px;
+  padding: 35px 0 48px;
   @include baseline-grid-background(24px,(#4b76a7 - #666 + #dda) );
   .icon {
     opacity: .3;
   }
   .text-wrapper {
-    padding: 24px 20px;
+    padding: 24px 0 0 15px;
   }
   h2 {
     color: #a00;
@@ -23,5 +23,15 @@
     .span6:last-child {
       border-left: 3px double #c66;
     }
+  }
+  em {
+    font-family: Georgia, serif;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 1.2em;
+    line-height: 24px;
+    color: #a00;
+    background: rgba(203,255,129,0.51);
+    padding: 5px;
   }
 }
