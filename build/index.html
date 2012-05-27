@@ -10,7 +10,7 @@
     <meta content='HITCON 2012 | Hacks in Taiwan Conference 台灣駭客年會' property='og:title' />
     <meta content='http://hitcon.org/2012/' property='og:url' />
     <meta content='Hacks In Taiwan Conference (HITCON) 台灣駭客年會是台灣最大的駭客與資安技術研討會，是駭客們一年一度的聚會。我們歡迎所有對資訊安全有興趣的朋友一同參與這每年一度的盛會。' property='og:description' />
-    <meta content='http://hitcon.org/2012/images/fb.png' property='og:image' />
+    <meta content='http://hitcon.org/2012/images/fb-new.jpg' property='og:image' />
     <meta content='website' property='og:type' />
     <meta content='HITCON 2012 | Hacks in Taiwan Conference 台灣駭客年會' property='og:site_name' />
     <meta content='612130717, 500301458' property='fb:admins' />
@@ -46,6 +46,9 @@
     <link type="text/css" href="stylesheets/all.css" media="screen" rel="stylesheet" />
   </head>
   <body class='no-js'>
+    <div class='container' id='top'>
+      <div class='fb-like fb-like-only' data-layout="button_count" data-send='false' data-href='http://hitcon.org/2012/' data-show-faces='false' data-width='100'></div>
+    </div>
     <div class='container'>
       <div class='still'>
         <div id='hd'>
@@ -57,7 +60,8 @@
           <h2 class='jf-title ct2 wf'>新世代的攻擊威脅</h2>
         </div>
       </div>
-      <div class='about row'>
+      <!-- Header image by http://www.flickr.com/photos/58782395@N03/5518992555/ -->
+      <div class='row' id='about'>
         <div class='span6 equal-heights'>
           <div class='text-wrapper whats-hitcon'>
             <h2 class='wf-h2'>What's HITCON</h2>
@@ -80,7 +84,7 @@
           <div class='hitimg equal-heights hidden-phone'></div>
         </div>
       </div>
-      <div class='feature'>
+      <div id='feature'>
         <div class='row big-header'>
           <div class='span12'>
             <hgroup>
@@ -155,7 +159,7 @@
           </div>
         </div>
       </div>
-      <div class='agenda'>
+      <div id='agenda'>
         <div class='line'>
           <div class='row'>
             <div class='span12'>
@@ -249,7 +253,54 @@
           <div class='v-line v-line-46'></div>
         </div>
       </div>
-      <div class='registration'>
+      <div class='row' id='venue'>
+        <div class='span6 equal-heights2'>
+          <div class='text-wrapper'>
+            <div class='big-header'>
+              <hgroup>
+                <i class='icon'>i</i>
+                <h2 class='wf-h2'>Venue & Information</h2>
+                <h3 class='ct9'>地點與資訊</h3>
+                <div class='post'>
+                  <div class='date'>
+                    <div class='start'>
+                      2012
+                      <span class='slash'>/</span>
+                      7
+                      <span class='slash'>/</span>
+                      20
+                      <span class='wd ct10'>(五)</span>
+                    </div>
+                    <div class='end'>
+                      2012
+                      <span class='slash'>/</span>
+                      7
+                      <span class='slash'>/</span>
+                      21
+                      <span class='wd ct10'>(六)</span>
+                    </div>
+                  </div>
+                  <div class='info'>
+                    <a class='place' href='http://goo.gl/maps/3MzL'>
+                      <div class='ct10'>中央研究院</div>
+                      <div class='ct10'>人文社會科學館</div>
+                      <div class='ct10'>國際會議廳</div>
+                      <div class='add'>台北市南港區研究院路二段128號</div>
+                    </a>
+                  </div>
+                </div>
+              </hgroup>
+            </div>
+          </div>
+        </div>
+        <div class='span6'>
+          <div class='google-map equal-heights2'>
+            <div id='map_canvas'></div>
+            <div class='old-screen'></div>
+          </div>
+        </div>
+      </div>
+      <div id='registration'>
         <div class='row big-header'>
           <div class='span12'>
             <hgroup>
@@ -266,7 +317,7 @@
               
               <h4>網路報名：線上填具完整資料並完成繳款程序。</h4>
               
-              <p>報名網址： <a href="http://reg.hitcon.org/2012">http://reg.hitcon.org/2012</a></p>
+              <p>報名網址： 6/1 公開</p>
               
               <h4>第一階段網路報名</h4>
               
@@ -339,11 +390,97 @@
           </div>
         </div>
       </div>
-      <!-- / = partial "partial/venue"; -->
     </div>
     <script type="text/javascript" src="javascripts/all.js"></script>
     <script type="text/javascript">(function() {var jf = document.createElement('script'); jf.type = 'text/javascript'; jf.async = true;jf.src = 'http://ds.justfont.com/core/js/v1.0/7b877747pvHCmpLX_7aZ8FK_YXYMGaZnbM3NCKXkw8PK5xsh-Iw6KBLSE1itaYdTofz1auIYGkxnHXL0Da22bDjcnefH9PmC4md7nTKNf4pKpWwtniR3IOS75GIbw4VSLP6hdAx7i3mwxMvCOK9l23g59-7Ac3VDTUF3UWl67Vk9_IwrwNw=.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(jf,s);})();</script>
     <script type="text/javascript" src="http://use.typekit.com/kip6jhf.js"></script>
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    <script type="text/javascript"
+        src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+    <script type="text/javascript">
+      var map;
+      function initialize() {
+        var hitconStyles = [
+            {
+              stylers: [
+                { invert_lightness: true },
+                { hue: "#08ff00" },
+                { saturation: 100 },
+                { lightness: 39 },
+                { gamma: 0.48 }
+              ]
+            },{
+              featureType: "road.highway",
+              stylers: [
+                { hue: "#ccff00" }
+              ]
+            },{
+              featureType: "road.local",
+              stylers: [
+                { hue: "#ccff00" }
+              ]
+            },{
+              featureType: "landscape",
+              stylers: [
+                { gamma: 0.57 }
+              ]
+            },{
+              featureType: "poi.government",
+              stylers: [
+                { lightness: 50 },
+                { hue: "#99ff00" },
+                { saturation: -18 }
+              ]
+            },{
+              featureType: "transit.station",
+              stylers: [
+                { hue: "#00ffff" },
+                { saturation: 75 },
+                { gamma: 0.92 }
+              ]
+            }
+          ];
+    
+        var hitconMapType = new google.maps.StyledMapType(hitconStyles, {name: "Hitcon Map"});
+    
+        var myOptions = {
+          zoom: 15,
+          center: new google.maps.LatLng(25.04342,121.61449),
+          mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'hitcon_map'],
+          title:"HITCON 2012"
+        };
+    
+        var map = new google.maps.Map(document.getElementById("map_canvas"),myOptions);
+        map.mapTypes.set('hitcon_map', hitconMapType);
+        map.setMapTypeId('hitcon_map');
+        
+        var MarkerImage = 'images/map-marker.png';
+    
+        var marker = new google.maps.Marker({
+    			position: new google.maps.LatLng(25.040913,121.613438),
+    			animation: google.maps.Animation.DROP,
+    			title:"HITCON 2012",
+    			icon: MarkerImage
+    		});
+    
+    		setTimeout(function(){
+        	marker.setMap(map);
+        }, 1000);
+    
+      }
+    
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/zh_TW/all.js#xfbml=1&appId=";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+    
+    
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
   </body>
 </html>

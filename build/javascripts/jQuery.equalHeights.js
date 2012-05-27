@@ -21,9 +21,10 @@
 $.fn.equalHeights = function(px) {
 		var currentTallest = 0;
 		$(this).each(function(i){
+		  $(this).css({'height': 'auto'});
 			if ($(this).height() > currentTallest) { currentTallest = $(this).height(); }
 		});
 		if ($.browser.msie && $.browser.version == 6.0) { $(this).children().css({'height': currentTallest}); }
-		$(this).css({'min-height': currentTallest}); 
+		$(this).css({'height': currentTallest});
 	return this;
 };

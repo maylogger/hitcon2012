@@ -1820,10 +1820,11 @@ a){var b=F.exec(a);b&&(b[1]=(b[1]||"").toLowerCase(),b[3]=b[3]&&new RegExp("(?:^
 $.fn.equalHeights = function(px) {
 		var currentTallest = 0;
 		$(this).each(function(i){
+		  $(this).css({'height': 'auto'});
 			if ($(this).height() > currentTallest) { currentTallest = $(this).height(); }
 		});
 		if ($.browser.msie && $.browser.version == 6.0) { $(this).children().css({'height': currentTallest}); }
-		$(this).css({'min-height': currentTallest}); 
+		$(this).css({'height': currentTallest});
 	return this;
 };
 /* Modernizr 2.5.3 (Custom Build) | MIT & BSD
@@ -1836,9 +1837,10 @@ $(".big-title").fitText(.9, { minFontSize: '53px', maxFontSize: '128px' });
 $(".sub-title").fitText(2.7, { minFontSize: '20px', maxFontSize: '43px' });
 $(".jf-title").fitText(2.7, { minFontSize: '30px', maxFontSize: '43px' });
 
-
 $(".equal-heights").equalHeights();
+$(".equal-heights2").equalHeights();
 
 $(window).resize(function(){
   $(".equal-heights").css("min-height","0").equalHeights();
+  $(".equal-heights2").css("min-height","0").equalHeights();
 });
