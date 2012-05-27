@@ -21,34 +21,6 @@
 .still {
   overflow: hidden;
   position: relative;
-  .video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    z-index: 0;
-  }
-  video {
-    @extend .container;
-    height: auto;
-    width: 942px;
-    margin-left: - 942px / 2;
-    margin-top: - 64%;
-    @media (max-width: 480px) {
-      display: none;
-    }
-    @media (max-width: 767px) {
-      display: none;
-    }
-    @media (min-width: 768px) and (max-width: 979px) {
-      width: 726px;
-      margin-left: - 726px / 2;
-    }
-    @media (min-width: 1200px) {
-      width: 1172px;
-      margin-left: - 1172px / 2;
-    }
-
-  }
 }
 
 .big-title {
@@ -92,17 +64,4 @@
   .wf-active & {
     font-weight: normal;
   }
-}
-
-
-// if touch panel
-
-html.touch video {
-  display: none;
-}
-
-// if no-video support
-
-html.no-video video {
-  display: none;
 }
