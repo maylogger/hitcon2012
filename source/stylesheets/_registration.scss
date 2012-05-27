@@ -14,6 +14,9 @@
   h3 {
     @include trailer(1, 24px);
   }
+  h4 {
+    margin-bottom: 0;
+  }
   .row-fluid {
     margin: 0 10%;
     width: auto;

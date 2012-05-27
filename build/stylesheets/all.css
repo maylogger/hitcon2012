@@ -5360,6 +5360,9 @@ i.icon {
 .registration h3 {
   margin-bottom: 1em;
 }
+.registration h4 {
+  margin-bottom: 0;
+}
 .registration .row-fluid {
   margin: 0 10%;
   width: auto;
