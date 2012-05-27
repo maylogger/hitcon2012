@@ -22,6 +22,10 @@ html,body {
   @include box-shadow( 0 1px 5px rgba(black,.8) );
 }
 
+#top.container {
+  overflow: visible;
+  @include box-shadow( none );
+}
 
 body {
   padding: 48px 0;
@@ -86,6 +90,7 @@ ul ul {
   margin-left: 1em;
 }
 
+@import "top";
 @import "header";
 @import "wf_control";
 @import "about";

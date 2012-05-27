@@ -42,7 +42,7 @@
 }
 
 .sub-title {
-  @include adjust-font-size-to(40px);
+  @include adjust-font-size-to(43px);
   margin: 0;
   font-family: "adobe-text-pro", Georgia, "Times New Roman", serif;
   text-transform: uppercase;
@@ -58,10 +58,34 @@
 
 .jf-title {
   font-weight: bold;
-  @include adjust-font-size-to(50px);
+  @include adjust-font-size-to(43px);
   text-shadow: 0 0 .1em rgba(84,173,255,0.9);
   color: rgba(white,.9);
   .wf-active & {
     font-weight: normal;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+  .big-title {
+    font-size: 80px;
+  }
+  .sub-title {
+    font-size: 27px;
+  }
+  .jf-title {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  .big-title {
+    font-size: 53px;
+  }
+  .sub-title {
+    font-size: 20px;
+  }
+  .jf-title {
+    font-size: 30px;
   }
 }

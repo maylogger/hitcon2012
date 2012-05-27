@@ -14,8 +14,12 @@
     = partial "shared/funny"
     = stylesheet_link_tag( "all" )
   %body.no-js
+    #top.container
+      = partial "shared/fb-like-only"
     .container
       = yield
     = javascript_include_tag( "all" )
     = partial "shared/justfont"
     = partial "shared/typekit"
+    = partial "shared/map-js"
+    = partial "shared/fb-js"

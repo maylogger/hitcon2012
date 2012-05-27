@@ -1,4 +1,4 @@
-.registration {
+#registration {
   background: #ffe;
   padding: 35px 0 48px;
   @include baseline-grid-background(24px,(#4b76a7 - #666 + #dda) );
@@ -31,10 +31,9 @@
     font-family: Georgia, serif;
     font-weight: bold;
     font-style: italic;
-    font-size: 1.2em;
-    line-height: 24px;
-    color: #a00;
-    background: rgba(203,255,129,0.51);
+    line-height: 1;
+    color: #335904;
+    background: rgba(203,255,129,0.3);
     padding: 5px;
   }
 }

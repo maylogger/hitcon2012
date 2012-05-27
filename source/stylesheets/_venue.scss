@@ -1,0 +1,111 @@
+#venue {
+  background: #e1e2e4 image-url("linen.png");
+  hgroup {
+    .icon {
+      color: #e1e2e4 - #333;
+      text-shadow: 0 1px 0 white;
+    }
+    h2 {
+      color: white;
+      text-shadow:  0 1px 0 darken(white, 15%),
+                    0 2px 0 darken(white, 16%),
+                    0 3px 0 darken(white, 17%),
+                    0 4px 0 darken(white, 18%),
+                    1px 5px 4px rgba(black, 0.2);
+    }
+  }
+  .text-wrapper {
+    padding-top: 0;
+    padding-bottom: 24px;
+  }
+  .date {
+    font-family: "proxima-nova-extra-condensed", "Helvetica Neue", sans-serif;
+    font-weight: 600;
+    color: #444;
+    @include adjust-font-size-to(50px,2);
+    @media (max-width: 979px) {
+      @include adjust-font-size-to(32px,1.5);
+    }
+    .slash {
+      color: #999;
+    }
+    .ct10 {
+      color: #999;
+      font-size: .67em;
+      position: relative;
+      top: -5px;
+      letter-spacing: 0;
+    }
+  }
+  .place {
+    display: block;
+    padding: 12px 0;
+    text-align: center;
+    padding: .5em 0;
+    @include adjust-font-size-to(32px,1.5);
+    @media (max-width: 979px) {
+      @include adjust-font-size-to(22px,1.5);
+    }
+    .add {
+      text-align: center;
+      color: #666;
+      font-size: 15px;
+    }
+  }
+
+  .post {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px 0;
+    background: #ffc;
+    position: relative;
+    @include box-shadow( 1px 3px 3px rgba(black,.2));
+    @include transform( rotate(-2deg) );
+    &:before {
+      $height: 32px;
+      background: rgba(white,.7);
+      @include box-shadow( 0 0 1px rgba(black,.2) );
+      @include transform( rotate(-2deg) );
+      width: 33%;
+      height: $height;
+      content: " ";
+      position: absolute;
+      top: - $height / 2;
+      left: 33%;
+    }
+  }
+
+  // for google maps
+  .span6 {
+    position: relative;
+    &:last-child {
+      background: black;
+    }
+  }
+  #map_canvas {
+    position: absolute;
+    top: 2%;
+    left: 3%;
+    height: 96%;
+    width: 94%;
+    background: #000f00;
+  }
+  .old-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background: image-url("line.png");
+    pointer-events: none;
+  }
+
+  a {
+    @include unstyled-link;
+    @include link-colors(#369, #a00);
+  }
+
+}
+
