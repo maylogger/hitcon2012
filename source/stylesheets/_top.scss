@@ -2,7 +2,6 @@
   padding: 10px 0;
   position: relative;
   z-index: 10;
-  overflow: hidden;
   ul,li {
     margin: 0;
     padding: 0;
@@ -51,9 +50,10 @@
     color: #444;
     @include adjust-font-size-to(32px,1);
     @media (max-width: 979px) {
-      @include adjust-font-size-to(16px,1);
+      @include adjust-font-size-to(24px,1);
     }
     @media (max-width: 797px) {
+      @include adjust-font-size-to(16px,1);
       text-align: center;
     }
     .start,.end {
@@ -72,8 +72,16 @@
   }
 }
 
-html.wf-active #top .date {
+html.wf-active #top {
   @media (max-width: 797px) {
-    @include adjust-font-size-to(24px,1);
+    padding-left: 24px;
+    .date {
+      @include adjust-font-size-to(24px,1);
+      float: left;
+    }
+    ul {
+      margin-right: 0;
+      text-align: left;
+    }
   }
 }
