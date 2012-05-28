@@ -47,7 +47,12 @@
   </head>
   <body class='no-js'>
     <div class='container' id='top'>
-      <div class='fb-like fb-like-only' data-layout="button_count" data-send='false' data-href='http://hitcon.org/2012/' data-show-faces='false' data-width='100'></div>
+      <ul class="like-buttons">
+        <li><div class="fb-like" data-href="http://hitcon.org/2012/" data-layout="button_count" data-width="97"></div></li>
+        <li><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://hitcon.org/2012/" data-text="HITCON 2012 | Hacks in Taiwan Conference 台灣駭客年會" data-lang="zh-tw">Tweet</a></li>
+        <li><g:plusone size="medium"></g:plusone></li>
+        <li><span class="hidden-phone"><a class="plurk button" href="javascript: void(window.open('http://www.plurk.com/?qualifier=shares&status=' .concat(encodeURIComponent(location.href)) .concat(' ') .concat('&#40;') .concat(encodeURIComponent(document.title)) .concat('&#41;')));">Plurk</a></span></li>
+      </ul>
     </div>
     <div class='container'>
       <div class='still'>
@@ -475,15 +480,28 @@
       google.maps.event.addDomListener(window, 'load', initialize);
     </script>
     <div id="fb-root"></div>
-    <script>(function(d, s, id) {
+    <script>
+    
+    (function(d, s, id) {
       var js, fjs = d.getElementsByTagName(s)[0];
       if (d.getElementById(id)) return;
       js = d.createElement(s); js.id = id;
       js.src = "//connect.facebook.net/zh_TW/all.js#xfbml=1&appId=";
       fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));</script>
+    }(document, 'script', 'facebook-jssdk'));
     
     
-    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+    
+    
+    window.___gcfg = {lang: 'zh-TW'};
+    
+    (function() {
+      var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+      po.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+    })();
+    
+    </script>
   </body>
 </html>

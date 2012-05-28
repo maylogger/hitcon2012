@@ -4970,12 +4970,51 @@ ul ul {
   height: 48px;
   position: relative;
   z-index: 10;
-  margin-bottom: -48px;
+  margin-bottom: -58px;
+  padding-top: 10px;
+  padding-left: 20px;
+}
+#top ul, #top li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+#top ul {
+  text-align: center;
+}
+#top li {
+  display: -moz-inline-box;
+  -moz-box-orient: vertical;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+}
+#top li {
+  *display: inline;
 }
 #top .fb-like {
-  position: absolute;
-  top: 10px;
-  left: 10px;
+  position: relative;
+  top: -1px;
+}
+#top .plurk {
+  font-size: 11px;
+  line-height: 1;
+  width: 27px;
+  border: 1px solid #cacaca;
+  margin-right: 30px;
+  padding: 3px 10px 4px;
+  background: #cf682f;
+  border-color: #aa460f;
+  color: white;
+  display: block;
+  -webkit-box-shadow: inset 0px 1px rgba(255, 255, 255, 0.496);
+  -moz-box-shadow: inset 0px 1px rgba(255, 255, 255, 0.496);
+  box-shadow: inset 0px 1px rgba(255, 255, 255, 0.496);
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  position: relative;
+  top: -3px;
 }
 
 .still {
