@@ -5073,16 +5073,7 @@ ul ul {
     font-size: 30px;
   }
 }
-.ct2 {
-  visibility: hidden;
-}
-
 .wf {
-  -webkit-transition: opacity 0.5s ease-in-out;
-  -moz-transition: opacity 0.5s ease-in-out;
-  -ms-transition: opacity 0.5s ease-in-out;
-  -o-transition: opacity 0.5s ease-in-out;
-  transition: opacity 0.5s ease-in-out;
   opacity: 1;
 }
 
@@ -5113,6 +5104,11 @@ ul ul {
 
 .wf-active .wf {
   font-weight: normal;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  -moz-transition: opacity 0.5s ease-in-out;
+  -ms-transition: opacity 0.5s ease-in-out;
+  -o-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
 }
 .wf-active .wf-h2 {
   position: relative;

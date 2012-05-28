@@ -1,11 +1,6 @@
 // init
 
-.ct2 {
-  visibility: hidden;
-}
-
 .wf {
-  @include transition(opacity .5s ease-in-out);
   opacity: 1;
 }
 
@@ -40,6 +35,7 @@
 .wf-active {
   .wf {
     font-weight: normal;
+    @include transition(opacity .5s ease-in-out);
   }
   .wf-h2 {
     position: relative;
