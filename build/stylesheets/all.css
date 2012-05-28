@@ -4890,10 +4890,12 @@ html, body {
 
 body {
   padding: 48px 0;
+  padding-bottom: 0;
 }
 @media (min-width: 768px) and (max-width: 979px) {
   body {
     padding: 20px;
+    padding-bottom: 0;
   }
 }
 @media (max-width: 767px) {
@@ -5406,6 +5408,12 @@ i.icon {
   color: white;
   text-shadow: 0 1px 0 #d9d9d9, 0 2px 0 #d6d6d6, 0 3px 0 #d4d4d4, 0 4px 0 #d1d1d1, 1px 5px 4px rgba(0, 0, 0, 0.2);
 }
+@media (min-width: 768px) and (max-width: 979px) {
+  #venue .span6 {
+    float: none;
+    width: auto;
+  }
+}
 #venue .text-wrapper {
   padding-top: 0;
   padding-bottom: 24px;
@@ -5493,10 +5501,10 @@ i.icon {
 }
 #venue #map_canvas {
   position: absolute;
-  top: 2%;
-  left: 3%;
-  height: 96%;
-  width: 94%;
+  top: 44px;
+  left: 44px;
+  right: 44px;
+  bottom: 44px;
   background: #000f00;
 }
 #venue .old-screen {
@@ -5508,6 +5516,7 @@ i.icon {
   height: 100%;
   background: url('../images/line.png');
   pointer-events: none;
+  opacity: .3;
 }
 #venue a {
   color: inherit;
@@ -5520,4 +5529,63 @@ i.icon {
 }
 #venue a:hover {
   color: #aa0000;
+}
+
+#hack {
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+  max-width: 1600px;
+  margin: 100px auto 0;
+}
+#hack .hack-img {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 50%;
+}
+#hack img {
+  margin-left: -50%;
+  width: 100%;
+  height: auto;
+  animation: round 50s linear infinite;
+  -webkit-animation: round 50s linear infinite;
+  -moz-animation: round 50s linear infinite;
+}
+@media (max-width: 979px) {
+  #hack img {
+    width: 800px;
+    margin-left: -400px;
+  }
+}
+
+@keyframes round {
+  from {
+    transform: rotate(360deg);
+  }
+
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+@-webkit-keyframes round {
+  from {
+    -webkit-transform: rotate(360deg);
+  }
+
+  to {
+    -webkit-transform: rotate(0deg);
+  }
+}
+
+@-moz-keyframes round {
+  from {
+    -moz-transform: rotate(360deg);
+  }
+
+  to {
+    -moz-transform: rotate(0deg);
+  }
 }
