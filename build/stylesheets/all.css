@@ -4867,7 +4867,6 @@ a.thumbnail:hover {
   }
 }
 html, body {
-  -webkit-font-smoothing: antialiased;
   background: #d7d8da;
   font-size: 16px;
   line-height: 24px;
@@ -5127,6 +5126,7 @@ html.wf-active #top .date {
   font-family: "changeling-neo-stencil", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   text-shadow: 0 0 0.1em rgba(84, 173, 255, 0.9);
+  color: white;
   color: rgba(255, 255, 255, 0.9);
   letter-spacing: .08em;
   margin-left: .09em;
@@ -5145,6 +5145,7 @@ html.wf-active #top .date {
   font-family: "adobe-text-pro", Georgia, "Times New Roman", serif;
   text-transform: uppercase;
   text-shadow: 0 0 0.1em rgba(84, 173, 255, 0.9);
+  color: white;
   color: rgba(255, 255, 255, 0.9);
 }
 .sub-title:last-child {
@@ -5159,6 +5160,7 @@ html.wf-active #top .date {
   font-size: 2.688em;
   line-height: 1.116em;
   text-shadow: 0 0 0.1em rgba(84, 173, 255, 0.9);
+  color: white;
   color: rgba(255, 255, 255, 0.9);
 }
 .wf-active .jf-title {
@@ -5266,16 +5268,9 @@ html.wf-active #top .date {
   transition: all 1s ease-in-out;
 }
 
-@font-face {
-  font-family: 'hitcon-icon';
-  src: url("../images/hitcon-icon.eot");
-  src: url("../images/hitcon-icon.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-
 i.icon {
-  font-family: 'hitcon-icon';
+  font-family: 'Pictos Custom';
+  -webkit-font-smoothing: antialiased;
   font-style: normal;
   font-weight: normal;
 }
@@ -5740,4 +5735,8 @@ i.icon {
   to {
     -moz-transform: rotate(0deg);
   }
+}
+
+.no-svg .svg {
+  display: none !important;
 }

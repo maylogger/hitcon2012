@@ -61,17 +61,9 @@
 
 // icon font
 
-
-@font-face {
-  font-family: 'hitcon-icon';
-  src: url('../images/hitcon-icon.eot');
-  src: url('../images/hitcon-icon.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
 i.icon {
-	font-family: 'hitcon-icon';
+	font-family: 'Pictos Custom';
+	-webkit-font-smoothing: antialiased;
 	font-style: normal;
 	font-weight: normal;
 }

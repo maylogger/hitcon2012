@@ -10,7 +10,6 @@ $iconWhiteSpritePath:     url("/images/glyphicons-halflings-white.png");
 $light-gray: #eeeeef;
 
 html,body {
-  -webkit-font-smoothing: antialiased;
   background: #d7d8da;
   font-size: 16px;
   line-height: 24px;
@@ -102,4 +101,4 @@ ul ul {
 @import "venue";
 @import "hack";
 
-@import "touch_tweak";
+@import "last_tweak";
