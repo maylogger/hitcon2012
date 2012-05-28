@@ -2,6 +2,12 @@
   padding: 10px 0;
   position: relative;
   z-index: 10;
+  @media (min-width: 768px) and (max-width: 979px) {
+    .span6 {
+      float: none;
+      width: auto;
+    }
+  }
   .like-buttons,li {
     margin: 0;
     padding: 0;
@@ -51,6 +57,7 @@
     @include adjust-font-size-to(23px,1);
     @media (max-width: 979px) {
       @include adjust-font-size-to(18px,1);
+      text-align: left;
     }
     @media (max-width: 767px) {
       @include adjust-font-size-to(16px,1);

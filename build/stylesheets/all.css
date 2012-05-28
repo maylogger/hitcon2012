@@ -4967,6 +4967,12 @@ ul ul {
   position: relative;
   z-index: 10;
 }
+@media (min-width: 768px) and (max-width: 979px) {
+  #top .span6 {
+    float: none;
+    width: auto;
+  }
+}
 #top .like-buttons, #top li {
   margin: 0;
   padding: 0;
@@ -5032,6 +5038,7 @@ ul ul {
   #top .date {
     font-size: 1.125em;
     line-height: 1.333em;
+    text-align: left;
   }
 }
 @media (max-width: 767px) {
