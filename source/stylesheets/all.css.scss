@@ -31,10 +31,12 @@ body {
   padding: 48px 0;
   @media (min-width: 768px) and (max-width: 979px) {
     padding: 20px;
+    padding-bottom: 0;
   }
   @media (max-width: 767px) {
     padding: 0;
   }
+  padding-bottom: 0;
 }
 
 .text-wrapper {
@@ -98,3 +100,6 @@ ul ul {
 @import "agenda";
 @import "registration";
 @import "venue";
+@import "hack";
+
+@import "touch_tweak";

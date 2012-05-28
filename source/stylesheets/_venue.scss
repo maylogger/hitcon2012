@@ -14,6 +14,12 @@
                     1px 5px 4px rgba(black, 0.2);
     }
   }
+  @media (min-width: 768px) and (max-width: 979px) {
+    .span6 {
+      float: none;
+      width: auto;
+    }
+  }
   .text-wrapper {
     padding-top: 0;
     padding-bottom: 24px;
@@ -85,11 +91,12 @@
   }
   #map_canvas {
     position: absolute;
-    top: 2%;
-    left: 3%;
-    height: 96%;
-    width: 94%;
+    top: 44px;
+    left: 44px;
+    right: 44px;
+    bottom: 44px;
     background: #000f00;
+    
   }
   .old-screen {
     position: absolute;
@@ -100,6 +107,7 @@
     height: 100%;
     background: image-url("line.png");
     pointer-events: none;
+    opacity: .3;
   }
 
   a {
