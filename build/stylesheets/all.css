@@ -4889,6 +4889,7 @@ html, body {
 }
 
 body {
+  overflow: hidden;
   padding: 0;
   padding-top: 12px;
 }
