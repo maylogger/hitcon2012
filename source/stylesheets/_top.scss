@@ -1,6 +1,8 @@
 #top {
   height: 48px;
   position: relative;
+  z-index: 10;
+  margin-bottom: -48px;
   .fb-like {
     position: absolute;
     top: 10px;

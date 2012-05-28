@@ -4965,6 +4965,8 @@ ul ul {
 #top {
   height: 48px;
   position: relative;
+  z-index: 10;
+  margin-bottom: -48px;
 }
 #top .fb-like {
   position: absolute;
