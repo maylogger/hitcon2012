@@ -14,7 +14,7 @@
 // for video
 
 .still {
-  background: image-url("space.jpg") no-repeat center center;
+  background: black image-url("space.jpg") no-repeat center center;
   @include background-size(cover);
 }
 
