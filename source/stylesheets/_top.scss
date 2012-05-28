@@ -2,10 +2,38 @@
   height: 48px;
   position: relative;
   z-index: 10;
-  margin-bottom: -48px;
+  margin-bottom: -58px;
+  padding-top: 10px;
+  padding-left: 20px;
+  ul,li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  ul {
+    text-align: center;
+  }
+  li {
+    @include inline-block;
+  }
   .fb-like {
-    position: absolute;
-    top: 10px;
-    left: 10px;
+    position: relative;
+    top: -1px;
+  }
+  .plurk {
+    font-size: 11px;
+    line-height: 1;
+    width: 27px;
+    border: 1px solid #cacaca;
+    margin-right: 30px;
+    padding: 3px 10px 4px;
+    background: #cf682f;
+    border-color: #aa460f;
+    color: white;
+    display: block;
+    @include box-shadow( inset 0px 1px rgba(255, 255, 255, 0.496094) );
+    @include border-radius( 3px );
+    position: relative;
+    top: -3px;
   }
 }
