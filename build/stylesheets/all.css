@@ -5074,21 +5074,19 @@ ul ul {
   }
 }
 .wf {
+  opacity: 0;
+}
+
+.wf-inactive .wf,
+.no-js .wf {
   opacity: 1;
 }
 
 .wf-h2 {
   font-family: "ff-netto-web", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal;
-  opacity: 1;
-  -webkit-transition: opacity 0.5s;
-  -moz-transition: opacity 0.5s;
-  -ms-transition: opacity 0.5s;
-  -o-transition: opacity 0.5s;
-  transition: opacity 0.5s;
 }
 
-.wf-loading .wf-h2,
 .wf-loading .wf {
   opacity: 0;
 }
@@ -5113,6 +5111,11 @@ ul ul {
 .wf-active .wf-h2 {
   position: relative;
   top: .15em;
+  -webkit-transition: opacity 0.5s;
+  -moz-transition: opacity 0.5s;
+  -ms-transition: opacity 0.5s;
+  -o-transition: opacity 0.5s;
+  transition: opacity 0.5s;
 }
 
 @font-face {

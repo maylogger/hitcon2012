@@ -1,21 +1,23 @@
 // init
 
 .wf {
+  opacity: 0;
+}
+
+.wf-inactive .wf,
+.no-js .wf {
   opacity: 1;
 }
 
 .wf-h2 {
   font-family: "ff-netto-web", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal;
-  opacity: 1;
-  @include transition(opacity .5s);
 }
 
 
 // loading
 
 .wf-loading {
-  .wf-h2,
   .wf {
     opacity: 0;
   }
@@ -40,6 +42,7 @@
   .wf-h2 {
     position: relative;
     top: .15em;
+    @include transition(opacity .5s);
   }
 }
 
