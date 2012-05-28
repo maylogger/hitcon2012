@@ -20,7 +20,7 @@ html,body {
 .container {
   overflow: hidden;
   @include box-shadow( 0 1px 5px rgba(black,.8) );
-  @media (max-width: 797px) {
+  @media (max-width: 767px) {
     @include box-shadow( none );  
   }
 }

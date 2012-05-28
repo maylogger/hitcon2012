@@ -2,14 +2,14 @@
   padding: 10px 0;
   position: relative;
   z-index: 10;
-  ul,li {
+  .like-buttons,li {
     margin: 0;
     padding: 0;
     list-style: none;
   }
-  ul {
+  .like-buttons {
     text-align: left;
-    @media (max-width: 797px) {
+    @media (max-width: 767px) {
       text-align: center;
       margin-right: -24px;
     }
@@ -48,11 +48,11 @@
     font-family: "proxima-nova-extra-condensed", "Helvetica Neue", sans-serif;
     font-weight: 600;
     color: #444;
-    @include adjust-font-size-to(32px,1);
+    @include adjust-font-size-to(23px,1);
     @media (max-width: 979px) {
-      @include adjust-font-size-to(24px,1);
+      @include adjust-font-size-to(18px,1);
     }
-    @media (max-width: 797px) {
+    @media (max-width: 767px) {
       @include adjust-font-size-to(16px,1);
       text-align: center;
     }
@@ -73,15 +73,27 @@
 }
 
 html.wf-active #top {
-  @media (max-width: 797px) {
-    padding-left: 24px;
+
+  .date {
+    @include adjust-font-size-to(32px,1);
+  }
+
+  @media (max-width: 767px) {
+    padding: 0;
+    .span6:last-child {
+      background: white;
+    }
     .date {
       @include adjust-font-size-to(24px,1);
-      float: left;
+      float: center;
     }
-    ul {
+    .like-buttons {
       margin-right: 0;
-      text-align: left;
+      padding-left: 5px;
+      text-align: center;
+    }
+    li {
+      margin-bottom: 5px;
     }
   }
 }

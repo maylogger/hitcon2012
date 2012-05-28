@@ -4880,7 +4880,7 @@ html, body {
   -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.8);
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.8);
 }
-@media (max-width: 797px) {
+@media (max-width: 767px) {
   .container {
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
@@ -4967,16 +4967,16 @@ ul ul {
   position: relative;
   z-index: 10;
 }
-#top ul, #top li {
+#top .like-buttons, #top li {
   margin: 0;
   padding: 0;
   list-style: none;
 }
-#top ul {
+#top .like-buttons {
   text-align: left;
 }
-@media (max-width: 797px) {
-  #top ul {
+@media (max-width: 767px) {
+  #top .like-buttons {
     text-align: center;
     margin-right: -24px;
   }
@@ -5025,16 +5025,16 @@ ul ul {
   font-family: "proxima-nova-extra-condensed", "Helvetica Neue", sans-serif;
   font-weight: 600;
   color: #444;
-  font-size: 2em;
-  line-height: 0.75em;
+  font-size: 1.438em;
+  line-height: 1.043em;
 }
 @media (max-width: 979px) {
   #top .date {
-    font-size: 1.5em;
-    line-height: 1em;
+    font-size: 1.125em;
+    line-height: 1.333em;
   }
 }
-@media (max-width: 797px) {
+@media (max-width: 767px) {
   #top .date {
     font-size: 1em;
     line-height: 1.5em;
@@ -5062,18 +5062,29 @@ ul ul {
   letter-spacing: 0;
 }
 
-@media (max-width: 797px) {
+html.wf-active #top .date {
+  font-size: 2em;
+  line-height: 0.75em;
+}
+@media (max-width: 767px) {
   html.wf-active #top {
-    padding-left: 24px;
+    padding: 0;
+  }
+  html.wf-active #top .span6:last-child {
+    background: white;
   }
   html.wf-active #top .date {
     font-size: 1.5em;
     line-height: 1em;
-    float: left;
+    float: center;
   }
-  html.wf-active #top ul {
+  html.wf-active #top .like-buttons {
     margin-right: 0;
-    text-align: left;
+    padding-left: 5px;
+    text-align: center;
+  }
+  html.wf-active #top li {
+    margin-bottom: 5px;
   }
 }
 
