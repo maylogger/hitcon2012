@@ -4880,6 +4880,13 @@ html, body {
   -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.8);
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.8);
 }
+@media (max-width: 797px) {
+  .container {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+  }
+}
 
 #top.container {
   overflow: visible;
@@ -4889,7 +4896,6 @@ html, body {
 }
 
 body {
-  overflow: hidden;
   padding: 0;
   padding-top: 12px;
 }
@@ -4957,7 +4963,7 @@ ul ul {
 }
 
 #top {
-  padding: 10px;
+  padding: 10px 0;
   position: relative;
   z-index: 10;
 }
@@ -5030,6 +5036,8 @@ ul ul {
 }
 @media (max-width: 797px) {
   #top .date {
+    font-size: 1em;
+    line-height: 1.5em;
     text-align: center;
   }
 }
@@ -5052,6 +5060,21 @@ ul ul {
   position: relative;
   top: -0.2em;
   letter-spacing: 0;
+}
+
+@media (max-width: 797px) {
+  html.wf-active #top {
+    padding-left: 24px;
+  }
+  html.wf-active #top .date {
+    font-size: 1.5em;
+    line-height: 1em;
+    float: left;
+  }
+  html.wf-active #top ul {
+    margin-right: 0;
+    text-align: left;
+  }
 }
 
 .still {
