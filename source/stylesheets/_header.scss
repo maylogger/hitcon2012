@@ -16,9 +16,6 @@
 .still {
   background: black image-url("space.jpg") no-repeat center center;
   @include background-size(cover);
-}
-
-.still {
   overflow: hidden;
   position: relative;
 }

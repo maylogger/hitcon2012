@@ -4995,9 +4995,6 @@ ul ul {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-}
-
-.still {
   overflow: hidden;
   position: relative;
 }
@@ -5087,6 +5084,22 @@ ul ul {
   font-weight: normal;
 }
 
+.no-js #hd {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+}
+
+.js #hd {
+  -webkit-transform: scale(0.7);
+  -moz-transform: scale(0.7);
+  -ms-transform: scale(0.7);
+  -o-transform: scale(0.7);
+  transform: scale(0.7);
+}
+
 .wf-loading .wf {
   opacity: 0;
 }
@@ -5116,6 +5129,18 @@ ul ul {
   -ms-transition: opacity 0.5s;
   -o-transition: opacity 0.5s;
   transition: opacity 0.5s;
+}
+.wf-active #hd {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -ms-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
 }
 
 @font-face {
@@ -5231,6 +5256,9 @@ i.icon {
   }
   #feature .text-wrapper h3 {
     text-align: center;
+  }
+  #feature .text-wrapper .icon {
+    display: block;
   }
 }
 
