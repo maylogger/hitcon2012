@@ -51,7 +51,7 @@
     color: #444;
     @include adjust-font-size-to(32px,1);
     @media (max-width: 979px) {
-      @include adjust-font-size-to(24px,1);
+      @include adjust-font-size-to(16px,1);
     }
     @media (max-width: 797px) {
       text-align: center;
@@ -69,5 +69,11 @@
       top: -.2em;
       letter-spacing: 0;
     }
+  }
+}
+
+html.wf-active #top .date {
+  @media (max-width: 797px) {
+    @include adjust-font-size-to(24px,1);
   }
 }
