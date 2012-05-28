@@ -1,5 +1,5 @@
 !!! 5
-%html
+%html.no-js
   %head
     %meta{ :charset => "utf-8" }
     %title= data.config.site_name
@@ -13,9 +13,8 @@
     = partial "shared/fb-og-meta"
     = partial "shared/funny"
     = stylesheet_link_tag( "all" )
-  %body.no-js
-    #top.container
-      = partial "shared/fb-like-only"
+  %body
+    = partial "partial/top"
     .container
       = yield
     = partial "partial/hack"

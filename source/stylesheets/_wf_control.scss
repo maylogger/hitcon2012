@@ -44,9 +44,11 @@
 .wf-active {
   .wf {
     font-weight: normal;
+    opacity: 1;
     @include transition(opacity .5s ease-in-out);
   }
   .wf-h2 {
+    opacity: 1;
     position: relative;
     top: .15em;
     @include transition(opacity .5s);

@@ -1,39 +1,72 @@
 #top {
-  height: 48px;
+  padding: 10px;
   position: relative;
   z-index: 10;
-  margin-bottom: -58px;
-  padding-top: 10px;
-  padding-left: 20px;
   ul,li {
     margin: 0;
     padding: 0;
     list-style: none;
   }
   ul {
-    text-align: center;
+    text-align: left;
+    @media (max-width: 797px) {
+      text-align: center;
+      margin-right: -24px;
+    }
   }
   li {
     @include inline-block;
   }
   .fb-like {
     position: relative;
-    top: -1px;
+    top: -2px;
   }
   .plurk {
     font-size: 11px;
     line-height: 1;
     width: 27px;
     border: 1px solid #cacaca;
-    margin-right: 30px;
-    padding: 3px 10px 4px;
-    background: #cf682f;
-    border-color: #aa460f;
-    color: white;
     display: block;
+    padding: 3px 10px 4px;
     @include box-shadow( inset 0px 1px rgba(255, 255, 255, 0.496094) );
     @include border-radius( 3px );
     position: relative;
     top: -3px;
+    background: #ededed;
+    color: #cf682f;
+    font-weight: bold;
+    &:hover {
+      opacity: 1;
+      background: #cf682f;
+      border-color: #aa460f;
+      color: white;
+    }
+  }
+  .date {
+    text-align: right;
+
+    font-family: "proxima-nova-extra-condensed", "Helvetica Neue", sans-serif;
+    font-weight: 600;
+    color: #444;
+    @include adjust-font-size-to(32px,1);
+    @media (max-width: 979px) {
+      @include adjust-font-size-to(24px,1);
+    }
+    @media (max-width: 797px) {
+      text-align: center;
+    }
+    .start,.end {
+      @include inline-block;
+    }
+    .slash {
+      color: #999;
+    }
+    .ct10 {
+      color: #999;
+      font-size: .67em;
+      position: relative;
+      top: -.2em;
+      letter-spacing: 0;
+    }
   }
 }
