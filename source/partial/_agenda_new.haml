@@ -1,0 +1,19 @@
+#agenda
+  .line
+    .row
+      .span12
+        %hgroup
+          %h2.wf.wf-h2
+            %i.icon l
+            Agenda
+          %h3.ct10 宇宙最美麗的議程即將出世了！
+        .fo
+          .svg= image_tag( "fo-2.svg", :alt => "美男幻" )
+        .fo-text
+          .svg= image_tag( "fo-text.svg", :alt => "劍頓戰幻" )
+  .grid
+    - 22.times do |n|
+      .h-line{ :class => "h-line-#{n}" }
+  .grid
+    - 47.times do |n|
+      .v-line{ :class => "v-line-#{n}" }
