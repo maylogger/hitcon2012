@@ -1,0 +1,56 @@
+#agenda {
+  padding: 24px 0;
+  background: image-url("agenda-bg.jpg");
+  @include box-shadow( inset 0 0 20px #b89985 );
+  .text-wrapper {
+    padding: 16px 0 8px;
+  }
+  hgroup {
+    padding-left: 24px;
+    padding-bottom: 24px;
+  }
+  .agenda-group {
+    margin: 0 24px;
+    border: 1px solid black;
+    border-width: 1px 0;
+    margin-bottom: -1px;
+    &.off {
+      .agenda-content { height: 0px;}
+    }
+    &.on {
+      .agenda-content { height: auto; }
+    }
+  }
+  .agenda-title {
+    @include link-colors(black);
+    @include unstyled-link;
+    display: block;
+    &:hover {
+      background: rgba(black,.05);
+    }
+    .time {
+      @include adjust-font-size-to(15px,1);
+    }
+    .head {
+      @include adjust-font-size-to(32px,2);
+      
+    }
+    .name {
+      @include adjust-font-size-to(40px,2);
+    }
+  }
+  .agenda-content {
+    @include transition(all .3s);
+    overflow: hidden;
+    p {
+      @include adjust-font-size-to(12px);
+    }
+    p:last-child {
+      margin-bottom: 12px;
+    }
+    a {
+      @include link-colors( rgba(black,.7) , black );
+      text-decoration: underline;
+    }
+  }
+}
