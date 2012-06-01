@@ -5713,6 +5713,14 @@ html.no-js #agenda .agenda-group.off .agenda-content {
 #venue a:hover {
   color: #aa0000;
 }
+#venue .more {
+  font-size: 0.75em;
+  line-height: 2em;
+  padding: 10px 24px 0;
+}
+#venue .more ul {
+  margin: 0;
+}
 
 #hack {
   height: 200px;
@@ -5732,10 +5740,9 @@ html.no-js #agenda .agenda-group.off .agenda-content {
   margin-left: -50%;
   width: 100%;
   height: auto;
+  animation: round 50s linear infinite;
   -webkit-animation: round 50s linear infinite;
   -moz-animation: round 50s linear infinite;
-  -o-animation: round 50s linear infinite;
-  animation: round 50s linear infinite;
 }
 @media (max-width: 979px) {
   #hack img {
@@ -5771,16 +5778,6 @@ html.no-js #agenda .agenda-group.off .agenda-content {
 
   to {
     -moz-transform: rotate(0deg);
-  }
-}
-
-@-o-keyframes round {
-  from {
-    -o-transform: rotate(360deg);
-  }
-
-  to {
-    -o-transform: rotate(0deg);
   }
 }
 

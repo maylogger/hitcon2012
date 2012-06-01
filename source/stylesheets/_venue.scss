@@ -115,5 +115,13 @@
     @include link-colors(#369, #a00);
   }
 
+
+  .more {
+    @include adjust-font-size-to(12px);
+    padding: 10px 24px 0;
+    ul {
+      margin: 0;
+    }
+  }
 }
 
