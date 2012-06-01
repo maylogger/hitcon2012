@@ -19,8 +19,17 @@
   }
   .span10 {
     border-left: 1px dashed rgba(black,.3);
+    @media (max-width: 767px) {
+      border-left: none;
+    }
+
     .text-wrapper {
       padding-left: 12px;
+      @media (max-width: 767px) {
+        padding-left: 0;
+        padding-top: 0;
+      }
+
     }
   }
   .agenda-group {
@@ -43,15 +52,18 @@
     }
     .time {
       text-align: right;
-      @include adjust-font-size-to(12px,2);
+      @include adjust-font-size-to(12px,1.5);
+      @media (max-width: 767px) {
+        text-align: left;
+      }
     }
     .head {
-      @include adjust-font-size-to(24px,1);
+      @include adjust-font-size-to(24px,1.5);
       color: #900;
       color: rgba(#900,.9);
     }
     .name {
-      @include adjust-font-size-to(20px,2);
+      @include adjust-font-size-to(20px,1.5);
     }
   }
   .agenda-content {
@@ -71,5 +83,9 @@
       @include link-colors( rgba(black,.7) , black );
       text-decoration: underline;
     }
+  }
+  .last-text {
+    padding: 24px 0 0;
+    text-align: center;
   }
 }

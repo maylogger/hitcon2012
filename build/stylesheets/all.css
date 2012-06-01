@@ -5382,27 +5382,45 @@ i.icon {
 }
 
 #agenda {
-  padding: 24px 0;
+  padding: 24px;
   background: url('../images/agenda-bg.jpg');
   -webkit-box-shadow: inset 0 0 20px #b89985;
   -moz-box-shadow: inset 0 0 20px #b89985;
   box-shadow: inset 0 0 20px #b89985;
 }
+#agenda .border {
+  border: 2px solid black;
+  border-color: rgba(0, 0, 0, 0.7);
+}
+#agenda .line {
+  border: 3px double black;
+  border-color: rgba(0, 0, 0, 0.7);
+  padding: 48px;
+}
 #agenda .text-wrapper {
   padding: 4px 0 8px;
 }
 #agenda hgroup {
-  padding-left: 24px;
   padding-bottom: 24px;
 }
 #agenda .span10 {
   border-left: 1px dashed rgba(0, 0, 0, 0.3);
 }
+@media (max-width: 767px) {
+  #agenda .span10 {
+    border-left: none;
+  }
+}
 #agenda .span10 .text-wrapper {
   padding-left: 12px;
 }
+@media (max-width: 767px) {
+  #agenda .span10 .text-wrapper {
+    padding-left: 0;
+    padding-top: 0;
+  }
+}
 #agenda .agenda-group {
-  margin: 0 24px;
   border: 1px solid black;
   border-width: 1px 0;
   margin-bottom: -1px;
@@ -5431,17 +5449,22 @@ i.icon {
 #agenda .agenda-title .time {
   text-align: right;
   font-size: 0.75em;
-  line-height: 4em;
+  line-height: 3em;
+}
+@media (max-width: 767px) {
+  #agenda .agenda-title .time {
+    text-align: left;
+  }
 }
 #agenda .agenda-title .head {
   font-size: 1.5em;
-  line-height: 1em;
+  line-height: 1.5em;
   color: #900;
   color: rgba(153, 0, 0, 0.9);
 }
 #agenda .agenda-title .name {
   font-size: 1.25em;
-  line-height: 2.4em;
+  line-height: 1.8em;
 }
 #agenda .agenda-content {
   -webkit-transition: opacity 1s;
@@ -5468,6 +5491,10 @@ i.icon {
 }
 #agenda .agenda-content a:hover {
   color: black;
+}
+#agenda .last-text {
+  padding: 24px 0 0;
+  text-align: center;
 }
 
 #registration {
@@ -5711,6 +5738,30 @@ i.icon {
   to {
     -moz-transform: rotate(0deg);
   }
+}
+
+#partner {
+  background: black;
+  padding: 48px;
+  color: white;
+  -webkit-font-smoothing: none;
+  text-align: center;
+}
+#partner .slogan {
+  font-size: 2em;
+  line-height: 1.5em;
+  color: cyan;
+}
+#partner img {
+  max-width: 100%;
+}
+#partner .like-buttons {
+  margin: 48px 0 0;
+  text-align: center;
+}
+#partner .centered {
+  margin: 0 auto;
+  float: none;
 }
 
 .no-svg .svg {

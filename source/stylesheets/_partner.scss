@@ -1,0 +1,23 @@
+#partner {
+  background: black;
+  padding: 48px;
+  color: white;
+  -webkit-font-smoothing: none;
+  text-align: center;
+  .slogan {
+    @include adjust-font-size-to(32px);
+    color: cyan;
+  }
+  img {
+    max-width: 100%;
+  }
+  .like-buttons {
+    margin: 48px 0 0;
+    text-align: center;
+  }
+  .centered {
+    margin: 0 auto;
+    float: none;
+  }
+
+}
