@@ -5397,6 +5397,12 @@ i.icon {
   border-color: rgba(0, 0, 0, 0.7);
   padding: 48px;
 }
+@media (max-width: 767px) {
+  #agenda .line {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
 #agenda .text-wrapper {
   padding: 4px 0 8px;
 }
@@ -5454,6 +5460,7 @@ i.icon {
 @media (max-width: 767px) {
   #agenda .agenda-title .time {
     text-align: left;
+    line-height: 1;
   }
 }
 #agenda .agenda-title .head {
@@ -5462,9 +5469,21 @@ i.icon {
   color: #900;
   color: rgba(153, 0, 0, 0.9);
 }
+@media (max-width: 767px) {
+  #agenda .agenda-title .head {
+    font-size: 0.938em;
+    line-height: 1.6em;
+  }
+}
 #agenda .agenda-title .name {
   font-size: 1.25em;
   line-height: 1.8em;
+}
+@media (max-width: 767px) {
+  #agenda .agenda-title .name {
+    font-size: 0.875em;
+    line-height: 1.714em;
+  }
 }
 #agenda .agenda-content {
   -webkit-transition: opacity 1s;
@@ -5476,6 +5495,12 @@ i.icon {
 }
 #agenda .agenda-content .span2 {
   text-align: right;
+}
+@media (max-width: 767px) {
+  #agenda .agenda-content .span2 {
+    text-align: left;
+    line-height: 1;
+  }
 }
 #agenda .agenda-content .span2,
 #agenda .agenda-content p {
@@ -5495,6 +5520,11 @@ i.icon {
 #agenda .last-text {
   padding: 24px 0 0;
   text-align: center;
+}
+
+html.no-js #agenda .agenda-group.off .agenda-content {
+  height: auto;
+  opacity: 1;
 }
 
 #registration {
