@@ -5383,7 +5383,7 @@ i.icon {
 
 #agenda {
   padding: 24px;
-  background: url('../images/agenda-bg.jpg');
+  background: #e8ceb7 url('../images/agenda-bg.jpg');
   -webkit-box-shadow: inset 0 0 20px #b89985;
   -moz-box-shadow: inset 0 0 20px #b89985;
   box-shadow: inset 0 0 20px #b89985;
@@ -5405,6 +5405,9 @@ i.icon {
 }
 #agenda .text-wrapper {
   padding: 4px 0 8px;
+}
+#agenda .span2 {
+  margin-left: -1px;
 }
 #agenda hgroup {
   padding-bottom: 24px;
@@ -5729,9 +5732,10 @@ html.no-js #agenda .agenda-group.off .agenda-content {
   margin-left: -50%;
   width: 100%;
   height: auto;
-  animation: round 50s linear infinite;
   -webkit-animation: round 50s linear infinite;
   -moz-animation: round 50s linear infinite;
+  -o-animation: round 50s linear infinite;
+  animation: round 50s linear infinite;
 }
 @media (max-width: 979px) {
   #hack img {
@@ -5767,6 +5771,16 @@ html.no-js #agenda .agenda-group.off .agenda-content {
 
   to {
     -moz-transform: rotate(0deg);
+  }
+}
+
+@-o-keyframes round {
+  from {
+    -o-transform: rotate(360deg);
+  }
+
+  to {
+    -o-transform: rotate(0deg);
   }
 }
 

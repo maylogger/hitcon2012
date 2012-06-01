@@ -1,6 +1,6 @@
 #agenda {
   padding: 24px;
-  background: image-url("agenda-bg.jpg");
+  background: #e8ceb7 image-url("agenda-bg.jpg");
   @include box-shadow( inset 0 0 20px #b89985 );
   .border {
     border: 2px solid black;
@@ -17,6 +17,9 @@
   }
   .text-wrapper {
     padding: 4px 0 8px;
+  }
+  .span2 {
+    margin-left: -1px;
   }
   hgroup {
     padding-bottom: 24px;
