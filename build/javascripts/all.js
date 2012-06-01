@@ -1844,3 +1844,15 @@ $(window).resize(function(){
   $(".equal-heights").css("min-height","0").equalHeights();
   $(".equal-heights2").css("min-height","0").equalHeights();
 });
+
+$(".agenda-title").each(function(){
+  var $this = $(this);
+  var $parent = $this.parent();
+  $this.toggle(function(e){
+    $parent.addClass("on").removeClass("off");
+    e.preventDefault();
+  },function(e){
+    $parent.addClass("off").removeClass("on");
+    e.preventDefault();
+  });
+});

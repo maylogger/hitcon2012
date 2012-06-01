@@ -1,24 +1,37 @@
 #agenda {
-  padding: 24px 0;
+  padding: 24px;
   background: image-url("agenda-bg.jpg");
   @include box-shadow( inset 0 0 20px #b89985 );
+  .border {
+    border: 2px solid black;
+    border-color: rgba(black,.7);
+  }
+  .line {
+    border: 3px double black;
+    border-color: rgba(black,.7);
+    padding: 48px;
+  }
   .text-wrapper {
-    padding: 16px 0 8px;
+    padding: 4px 0 8px;
   }
   hgroup {
-    padding-left: 24px;
     padding-bottom: 24px;
   }
+  .span10 {
+    border-left: 1px dashed rgba(black,.3);
+    .text-wrapper {
+      padding-left: 12px;
+    }
+  }
   .agenda-group {
-    margin: 0 24px;
     border: 1px solid black;
     border-width: 1px 0;
     margin-bottom: -1px;
     &.off {
-      .agenda-content { height: 0px;}
+      .agenda-content { height: 0px; opacity: 0; }
     }
     &.on {
-      .agenda-content { height: auto; }
+      .agenda-content { height: auto; opacity: 1; }
     }
   }
   .agenda-title {
@@ -29,19 +42,25 @@
       background: rgba(black,.05);
     }
     .time {
-      @include adjust-font-size-to(15px,1);
+      text-align: right;
+      @include adjust-font-size-to(12px,2);
     }
     .head {
-      @include adjust-font-size-to(32px,2);
-      
+      @include adjust-font-size-to(24px,1);
+      color: #900;
+      color: rgba(#900,.9);
     }
     .name {
-      @include adjust-font-size-to(40px,2);
+      @include adjust-font-size-to(20px,2);
     }
   }
   .agenda-content {
-    @include transition(all .3s);
+    @include transition(opacity 1s);
     overflow: hidden;
+    .span2 {
+      text-align: right;
+    }
+    .span2,
     p {
       @include adjust-font-size-to(12px);
     }
