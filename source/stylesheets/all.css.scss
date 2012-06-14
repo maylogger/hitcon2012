@@ -24,6 +24,10 @@ html,body {
   }
 }
 
+#bd {
+  margin-bottom: 50px;
+}
+
 #top.container {
   overflow: visible;
   @include box-shadow( none );
@@ -91,15 +95,18 @@ ul ul {
   margin-left: 1em;
 }
 
+@import "navbar";
 @import "top";
 @import "header";
 @import "wf_control";
 @import "about";
 @import "feature";
 @import "agenda_new";
+@import "agenda";
 @import "registration";
 @import "venue";
 @import "hack";
 @import "partner";
+@import "sponsor";
 
 @import "last_tweak";

@@ -2,6 +2,10 @@
 og_type: "website"
 ---
 
+- content_for :navbar do
+  = partial "/shared/navbar", :locals => { :current => "index" }
+
+
 = partial "partial/header"
 
 / Header image by http://www.flickr.com/photos/58782395@N03/5518992555/
@@ -10,10 +14,5 @@ og_type: "website"
 
 = partial "partial/feature"
 
-= partial "partial/agenda_new"
-
-= partial "partial/venue"
-
-= partial "partial/registration"
-
-= partial "partial/partner"
+- content_for :footer do
+  = partial "partial/hack"

@@ -13,15 +13,16 @@
     = partial "shared/fb-og-meta"
     = partial "shared/funny"
     = stylesheet_link_tag( "all" )
-    = partial "shared/pictos"
-  %body
+  %body{ :id => data.page.body_id }
+    = yield_content :navbar
     = partial "partial/top"
-    .container
+    #bd.container
       = yield
-    = partial "partial/hack"
+    = yield_content :footer
     = javascript_include_tag( "all" )
     = partial "shared/justfont"
     = partial "shared/typekit"
+    = partial "shared/pictos"
     = partial "shared/map-js"
     = partial "shared/fb-js"
     = partial "shared/google_analytics"

@@ -1,0 +1,37 @@
+#sponsor {
+  .container {
+    @include box-shadow(none);
+  }
+  .thumbnail {
+    background: #eeeeef;
+    @media (max-width: 767px) {
+      margin: 0 24px 24px;
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+    h2 {
+      @include adjust-font-size-to(18px, 1);
+    }
+    p {
+      @include adjust-font-size-to(13px, 2/3);
+      @include trailer(2/3/2, 13px);
+    }
+    .last {
+      margin: 0;
+    }
+  }  
+  h2 {
+    @include adjust-font-size-to(24px);
+  }
+  @media (max-width: 767px) {
+    h2 {
+      text-align: center;
+    }
+    .thumbnails [class*="span"]  {
+      width: auto;
+      float: none;
+    }
+  }
+}

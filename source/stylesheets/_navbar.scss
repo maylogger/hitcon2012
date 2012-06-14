@@ -1,0 +1,49 @@
+.navbar {
+  margin: 0;
+  .navbar-inner {
+    @include background( linear-gradient( #333, rgba(#222,.8) ) );
+  }
+  .current {
+    background: black;
+    margin-bottom: -5px;
+    color: white;
+    text-shadow: 0 1px 0 black;
+  }
+  i {
+    margin-top: 2px;
+    margin-right: 2px;
+  }
+  .container {
+    @include box-shadow(none);
+  }
+}
+
+.navbar-inner {
+  @include border-radius(0);
+  @include box-shadow(none);
+}
+
+.navbar .brand {
+  font-weight: bold;
+}
+
+.navbar .nav > li > a {
+  @include link-colors( rgba(white,.7), rgba(white,1) );
+  &.current {
+    color: white;
+    &:hover {
+      background: black;
+      cursor: default;
+    }
+  }
+}
+
+body {
+  padding-top: 60px;
+  @media ( max-width: 979px ) {
+    padding-top: 0;
+    .brand {
+      text-align: center;
+    }
+  }
+}
