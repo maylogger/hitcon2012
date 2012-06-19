@@ -1,9 +1,11 @@
 #sponsor {
   .container {
     @include box-shadow(none);
+    overflow: visible;
   }
   .thumbnail {
     background: #eeeeef;
+    @include box-shadow( 10px 10px 1px rgba(black,.05) );
     @media (max-width: 767px) {
       margin: 0 24px 24px;
       img {
@@ -24,10 +26,14 @@
   }  
   h2 {
     @include adjust-font-size-to(24px);
+    @include ellipsis;
   }
   @media (max-width: 767px) {
     h2 {
-      text-align: center;
+      margin: 0 24px;
+    }
+    .thumbnail h2 {
+      margin: 0;
     }
     .thumbnails [class*="span"]  {
       width: auto;

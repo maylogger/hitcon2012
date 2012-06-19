@@ -16,8 +16,14 @@
   .container {
     @include box-shadow(none);
   }
+  .btn-navbar {
+    margin-top: 15px;
+  }
+  @media ( max-width: 767px ) {
+    margin-bottom: 10px;
+  };
+  
 }
-
 .navbar-inner {
   @include border-radius(0);
   @include box-shadow(none);
@@ -25,10 +31,12 @@
 
 .navbar .brand {
   font-weight: bold;
+  padding: 18px 20px 22px;
 }
 
 .navbar .nav > li > a {
   @include link-colors( rgba(white,.7), rgba(white,1) );
+  padding: 20px 10px 21px;
   &.current {
     color: white;
     &:hover {
@@ -39,7 +47,7 @@
 }
 
 body {
-  padding-top: 60px;
+  padding-top: 70px;
   @media ( max-width: 979px ) {
     padding-top: 0;
     .brand {

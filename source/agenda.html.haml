@@ -1,6 +1,15 @@
+---
+title: "宇宙最美的議程"
+og_url: "http://hitcon.org/2012/agenda.html"
+og_description: "HITCON 2012 台灣駭客年會議程表"
+---
+
+- content_for :top do
+  = partial "partial/top"
+
 - content_for :navbar do
   = partial "/shared/navbar", :locals => { :current => "agenda" }
 
 = partial "partial/agenda_new"
 
-= partial "partial/agenda"
+// = partial "partial/agenda"

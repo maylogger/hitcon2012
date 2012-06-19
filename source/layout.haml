@@ -15,7 +15,7 @@
     = stylesheet_link_tag( "all" )
   %body{ :id => data.page.body_id }
     = yield_content :navbar
-    = partial "partial/top"
+    = yield_content :top
     #bd.container
       = yield
     = yield_content :footer

@@ -5,6 +5,8 @@ og_type: "website"
 - content_for :navbar do
   = partial "/shared/navbar", :locals => { :current => "index" }
 
+- content_for :top do
+  = partial "partial/top"
 
 = partial "partial/header"
 
