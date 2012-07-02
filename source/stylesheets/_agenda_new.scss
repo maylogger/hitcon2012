@@ -50,6 +50,9 @@
       .agenda-content { height: auto; opacity: 1; }
     }
   }
+  .two-col .agenda-group {
+    border-bottom: none;
+  }
   .agenda-title {
     @include link-colors(black);
     @include unstyled-link;
