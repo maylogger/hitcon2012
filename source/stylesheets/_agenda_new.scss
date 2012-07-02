@@ -63,7 +63,8 @@
     @include unstyled-link;
     display: block;
     .time {
-      text-align: right;
+      text-align: left;
+      font-family: monospace;
       @include adjust-font-size-to(12px,2/3);
       @media (max-width: 767px) {
         text-align: left;
