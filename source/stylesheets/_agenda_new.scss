@@ -28,8 +28,10 @@
   }
   .span10 {
     border-left: 1px dashed rgba(black,.3);
+    margin-left: -1px;
     @media (max-width: 767px) {
       border-left: none;
+      margin-left: 0;
     }
 
     .text-wrapper {
