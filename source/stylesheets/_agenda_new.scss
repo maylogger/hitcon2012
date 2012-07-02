@@ -98,7 +98,7 @@
     @include transition(opacity 1s);
     overflow: hidden;
     .span2 {
-      text-align: right;
+      text-align: left;
       @media (max-width: 767px) {
         text-align: left;
         line-height: 1;
