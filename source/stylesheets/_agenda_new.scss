@@ -28,8 +28,10 @@
   }
   .span10 {
     border-left: 1px dashed rgba(black,.3);
+    margin-left: -1px;
     @media (max-width: 767px) {
       border-left: none;
+      margin-left: 0;
     }
 
     .text-wrapper {
@@ -63,7 +65,8 @@
     @include unstyled-link;
     display: block;
     .time {
-      text-align: right;
+      text-align: left;
+      font-family: monospace;
       @include adjust-font-size-to(12px,2/3);
       @media (max-width: 767px) {
         text-align: left;
@@ -97,7 +100,7 @@
     @include transition(opacity 1s);
     overflow: hidden;
     .span2 {
-      text-align: right;
+      text-align: left;
       @media (max-width: 767px) {
         text-align: left;
         line-height: 1;
