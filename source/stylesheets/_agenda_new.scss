@@ -8,6 +8,12 @@
     border: 2px solid black;
     border-color: rgba(black,.7);
   }
+  h2 {
+    font-size: 2em;
+    @media ( max-width: 767px ) {
+      font-size: 1.5em;
+    }
+  }
   .line {
     border: 3px double black;
     border-color: rgba(black,.7);
