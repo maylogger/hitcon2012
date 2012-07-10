@@ -1,12 +1,6 @@
 $only3d: ture;
 @import "compass";
 
-// bootstrap setup
-$iconSpritePath:          url("/images/glyphicons-halflings.png");
-$iconWhiteSpritePath:     url("/images/glyphicons-halflings-white.png");
-@import "bootstrap";
-@import "bootstrap-responsive";
-
 $light-gray: #eeeeef;
 
 html,body {

@@ -1,7 +1,7 @@
 .navbar {
   margin: 0;
   .navbar-inner {
-    @include background( linear-gradient( #333, rgba(#222,.8) ) );
+    // @include background( linear-gradient( #333, rgba(#222,.8) ) );
   }
   .current {
     background: black;
@@ -15,13 +15,22 @@
   }
   .container {
     @include box-shadow(none);
+    overflow: visible;
   }
   .btn-navbar {
     margin-top: 15px;
   }
   @media ( max-width: 767px ) {
     margin-bottom: 10px;
-  };
+  }
+  
+  .dropdown-menu {
+    &:before,
+    &:after {
+      display: none;
+    }
+    top: 70%;
+  }
   
 }
 .navbar-inner {

@@ -12,7 +12,7 @@
     -#<link rel="apple-touch-icon" sizes="114x114" href="/images/apple-touch-icon-114x114.png">
     = partial "shared/fb-og-meta"
     = partial "shared/funny"
-    = stylesheet_link_tag( "all" )
+    = stylesheet_link_tag( "http://current.bootstrapcdn.com/bootstrap-v204/css/bootstrap-combined.min.css", "all" )
   %body{ :id => data.page.body_id }
     = yield_content :navbar
     = yield_content :top
