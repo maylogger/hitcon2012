@@ -1,7 +1,8 @@
 #rootan {
-  background: #e8ceb7 image-url("rootanbg.jpg");
+  background: #000 image-url("rootan-bg.jpg") center bottom no-repeat;
   padding: 35px 0 48px;
-  @include baseline-grid-background(24px,(#4b76a7 - #666 + #dda) );
+  color: #FFF;
+
   .icon {
     opacity: .3;
   }
