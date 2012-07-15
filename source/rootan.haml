@@ -1,0 +1,13 @@
+---
+title: "駭客娘"
+og_url: "http://hitcon.org/2012/rootan.html"
+og_description: "「ROOTAN 露坦」HITCON 2012 看板娘"
+---
+
+- content_for :top do
+  = partial "partial/top"
+
+- content_for :navbar do
+  = partial "/shared/navbar", :locals => { :current => "rootan" }
+
+= partial "partial/rootan"

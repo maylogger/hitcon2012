@@ -55,6 +55,10 @@
   }
 }
 
+#nopadding {
+  padding: 0;
+}
+
 body {
   padding-top: 70px;
   @media ( max-width: 979px ) {
