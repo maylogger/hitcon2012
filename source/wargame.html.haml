@@ -1,0 +1,13 @@
+---
+title: "史上最煎熬的 Wargame"
+og_url: "http://hitcon.org/2012/wargame.html"
+og_description: "HITCON 2012 Wargame 辦法"
+---
+
+- content_for :navbar do
+  = partial "/shared/navbar", :locals => { :current => "wargame" }
+
+- content_for :top do
+  = partial "partial/top"
+
+= partial "partial/wargame"

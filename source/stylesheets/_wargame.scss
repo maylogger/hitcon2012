@@ -1,0 +1,57 @@
+#wargame {
+  background: black;
+  padding: 35px 0 48px;
+  @include baseline-grid-background(24px,(#a00 - #333) );
+  color: #ccc;
+  .icon {
+    color: #a00;
+  }
+  .text-wrapper {
+    padding: 24px 0 0 15px;
+  }
+  .letter {
+    padding: 24px;
+    background: #444;
+    @include pie-clearfix;
+    color: #ccc;
+    h2 {
+      @include adjust-font-size-to(24px);
+      margin: 0;
+      padding: 0;
+      color: white;
+    }
+    p {
+      margin: 0;
+      padding: 0;
+      @include adjust-font-size-to(16px);
+      margin-bottom: 24px;
+    }
+    .pull-right {
+      font-style: italic;
+      color:  white;
+    }
+  }
+  h2 {
+    color: #a00;
+  }
+  h3 {
+    color: #a00;
+    @include trailer(1, 24px);
+  }
+  h4 {
+    margin-bottom: 0;
+  }
+  .row-fluid {
+    margin: 0 10%;
+    width: auto;
+  }
+  em {
+    font-family: Georgia, serif;
+    font-weight: bold;
+    font-style: italic;
+    line-height: 1;
+    color: #335904;
+    background: rgba(203,255,129,0.3);
+    padding: 5px;
+  }
+}
