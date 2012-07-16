@@ -1,21 +1,26 @@
 #wargame {
-  background: black;
-  padding: 35px 0 48px;
-  @include baseline-grid-background(24px,(#a00 - #333) );
+  .inner {
+    @include baseline-grid-background(24px,(#5f0000) );
+    padding: 35px 0 48px;
+  }
+  background: black image-url("blood.png") repeat center top;
   color: #ccc;
+  color: rgba( white, .7 );
   .icon {
-    color: #a00;
+    color: #f33;
+    text-shadow: 0 0 5px #a00, 0 0 10px #a00, 0 0 15px #a00, 0 0 20px #a00;
   }
   .text-wrapper {
     padding: 24px 0 0 15px;
   }
   .letter {
     padding: 24px;
-    background: #444;
+    background: #5f0000 image-url("hand.png") no-repeat right bottom;
     @include pie-clearfix;
     color: #ccc;
     h2 {
       @include adjust-font-size-to(24px);
+      text-shadow: none;
       margin: 0;
       padding: 0;
       color: white;
@@ -32,7 +37,8 @@
     }
   }
   h2 {
-    color: #a00;
+    color: #f33;
+    text-shadow: 0 0 5px #a00, 0 0 10px #a00, 0 0 15px #a00, 0 0 20px #a00;
   }
   h3 {
     color: #a00;
