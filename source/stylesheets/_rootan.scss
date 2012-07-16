@@ -2,18 +2,15 @@
   background: #000 image-url("rootan-bg.jpg") center bottom no-repeat;
   padding: 35px 0 48px;
   color: #FFF;
-
-  .icon {
-    opacity: .3;
-  }
   .text-wrapper {
     padding: 24px 0 0 15px;
   }
   h2 {
-    color: #a00;
+    color: white;
   }
   h3 {
     @include trailer(1, 24px);
+    margin-right: -2em;
   }
   h4 {
     margin-bottom: 0;
@@ -21,12 +18,6 @@
   .row-fluid {
     margin: 0 10%;
     width: auto;
-    .span6:first-child {
-      margin-right: -5px;
-    }
-    .span6:last-child {
-      border-left: 3px double #c66;
-    }
   }
   em {
     font-family: Georgia, serif;
@@ -36,5 +27,8 @@
     color: #335904;
     background: rgba(203,255,129,0.3);
     padding: 5px;
+  }
+  .rootan {
+    margin-top: 30px;
   }
 }
