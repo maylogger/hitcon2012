@@ -113,6 +113,7 @@
       }
 
     }
+    .slide,
     .span2,
     p {
       @include adjust-font-size-to(12px);
@@ -129,7 +130,11 @@
     padding: 24px 0 0;
     text-align: center;
   }
+  .slide a {
+    font-weight: bold;
+    @include link-colors(#036 + #330);
+  }
 }
 
 
-html.no-js #agenda .agenda-group.off .agenda-content { height: auto; opacity: 1; }
+html.no-js .agenda .agenda-group.off .agenda-content { height: auto; opacity: 1; }
